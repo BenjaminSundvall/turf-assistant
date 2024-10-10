@@ -1,0 +1,402 @@
+[
+    {
+        "dateCreated": "2012-04-18T06:56:11+0000",
+        "dateLastTaken": "2024-09-23T14:43:47+0000",
+        "latitude": 58.408349,
+        "currentOwner": {
+            "name": "Spiff",
+            "id": 75945
+        },
+        "name": "RydEast",
+        "id": 8306,
+        "totalTakeovers": 8752,
+        "region": {
+            "country": "se",
+            "name": "\u00d6sterg\u00f6tland",
+            "id": 139
+        },
+        "pointsPerHour": 5,
+        "longitude": 15.574113,
+        "takeoverPoints": 125
+    },
+    {
+        "dateCreated": "2019-01-10T10:30:00+0000",
+        "dateLastTaken": "2024-09-23T15:22:43+0000",
+        "latitude": 58.411523,
+        "currentOwner": {
+            "name": "l355",
+            "id": 433488
+        },
+        "name": "PaleRyder",
+        "id": 178624,
+        "totalTakeovers": 6809,
+        "region": {
+            "country": "se",
+            "name": "\u00d6sterg\u00f6tland",
+            "id": 139
+        },
+        "pointsPerHour": 6,
+        "longitude": 15.572157,
+        "takeoverPoints": 110
+    },
+    {
+        "dateCreated": "2014-09-06T20:08:25+0000",
+        "dateLastTaken": "2024-09-23T14:23:41+0000",
+        "latitude": 58.416986,
+        "currentOwner": {
+            "name": "miawita",
+            "id": 63874
+        },
+        "name": "R\u00f6daSp\u00e5ret",
+        "id": 34618,
+        "totalTakeovers": 3173,
+        "region": {
+            "country": "se",
+            "name": "\u00d6sterg\u00f6tland",
+            "id": 139
+        },
+        "pointsPerHour": 2,
+        "longitude": 15.574294,
+        "takeoverPoints": 170
+    },
+    {
+        "dateCreated": "2023-06-09T18:28:47+0000",
+        "dateLastTaken": "2024-09-23T15:15:20+0000",
+        "latitude": 58.404738,
+        "currentOwner": {
+            "name": "l355",
+            "id": 433488
+        },
+        "name": "Link\u00f6pingGK",
+        "id": 599350,
+        "totalTakeovers": 2080,
+        "region": {
+            "country": "se",
+            "name": "\u00d6sterg\u00f6tland",
+            "id": 139
+        },
+        "pointsPerHour": 7,
+        "longitude": 15.571913,
+        "takeoverPoints": 95
+    },
+    {
+        "dateCreated": "2011-09-03T19:00:00+0000",
+        "dateLastTaken": "2024-09-22T10:28:12+0000",
+        "latitude": 58.407617,
+        "currentOwner": {
+            "name": "hookturf",
+            "id": 73461
+        },
+        "name": "BallCorner",
+        "id": 2941,
+        "totalTakeovers": 5114,
+        "region": {
+            "country": "se",
+            "name": "\u00d6sterg\u00f6tland",
+            "id": 139
+        },
+        "pointsPerHour": 3,
+        "longitude": 15.555313,
+        "takeoverPoints": 155
+    },
+    {
+        "dateCreated": "2014-09-06T20:10:08+0000",
+        "dateLastTaken": "2024-09-22T16:19:42+0000",
+        "latitude": 58.415128,
+        "currentOwner": {
+            "name": "senne",
+            "id": 13298
+        },
+        "name": "VillaRyd",
+        "id": 34619,
+        "totalTakeovers": 6308,
+        "region": {
+            "country": "se",
+            "name": "\u00d6sterg\u00f6tland",
+            "id": 139
+        },
+        "pointsPerHour": 5,
+        "longitude": 15.567744,
+        "takeoverPoints": 125
+    },
+    {
+        "dateCreated": "2021-01-14T20:33:36+0000",
+        "dateLastTaken": "2024-09-22T16:18:15+0000",
+        "latitude": 58.417095,
+        "currentOwner": {
+            "name": "senne",
+            "id": 13298
+        },
+        "name": "Nobel1916",
+        "id": 356762,
+        "totalTakeovers": 2542,
+        "region": {
+            "country": "se",
+            "name": "\u00d6sterg\u00f6tland",
+            "id": 139
+        },
+        "pointsPerHour": 6,
+        "longitude": 15.564525,
+        "takeoverPoints": 110
+    },
+    {
+        "dateCreated": "2011-08-08T19:05:38+0000",
+        "dateLastTaken": "2024-09-22T16:33:07+0000",
+        "latitude": 58.415745,
+        "currentOwner": {
+            "name": "senne",
+            "id": 13298
+        },
+        "name": "Atterbom",
+        "id": 2572,
+        "totalTakeovers": 7238,
+        "region": {
+            "country": "se",
+            "name": "\u00d6sterg\u00f6tland",
+            "id": 139
+        },
+        "pointsPerHour": 5,
+        "longitude": 15.560768,
+        "takeoverPoints": 125
+    },
+    {
+        "dateCreated": "2023-09-21T16:12:03+0000",
+        "dateLastTaken": "2024-09-22T16:31:35+0000",
+        "latitude": 58.416993,
+        "currentOwner": {
+            "name": "senne",
+            "id": 13298
+        },
+        "name": "LeopoldsZon",
+        "id": 626448,
+        "totalTakeovers": 612,
+        "region": {
+            "country": "se",
+            "name": "\u00d6sterg\u00f6tland",
+            "id": 139
+        },
+        "pointsPerHour": 5,
+        "longitude": 15.556909,
+        "takeoverPoints": 125
+    },
+    {
+        "dateCreated": "2022-01-19T12:00:00+0000",
+        "dateLastTaken": "2024-09-23T10:58:27+0000",
+        "latitude": 58.411964,
+        "currentOwner": {
+            "name": "l355",
+            "id": 433488
+        },
+        "name": "StudentRyd",
+        "id": 483431,
+        "totalTakeovers": 1768,
+        "region": {
+            "country": "se",
+            "name": "\u00d6sterg\u00f6tland",
+            "id": 139
+        },
+        "pointsPerHour": 6,
+        "longitude": 15.561761,
+        "takeoverPoints": 110
+    },
+    {
+        "dateCreated": "2016-05-09T07:00:00+0000",
+        "dateLastTaken": "2024-09-22T14:26:54+0000",
+        "latitude": 58.418824,
+        "currentOwner": {
+            "name": "greger100",
+            "id": 399039
+        },
+        "name": "MountainWater",
+        "id": 70110,
+        "totalTakeovers": 1304,
+        "region": {
+            "country": "se",
+            "name": "\u00d6sterg\u00f6tland",
+            "id": 139
+        },
+        "pointsPerHour": 3,
+        "longitude": 15.555588,
+        "takeoverPoints": 155
+    },
+    {
+        "dateCreated": "2014-09-06T20:07:42+0000",
+        "dateLastTaken": "2024-09-23T14:30:08+0000",
+        "latitude": 58.419589,
+        "currentOwner": {
+            "name": "miawita",
+            "id": 63874
+        },
+        "name": "GulaSp\u00e5ret",
+        "id": 34617,
+        "totalTakeovers": 3296,
+        "region": {
+            "country": "se",
+            "name": "\u00d6sterg\u00f6tland",
+            "id": 139
+        },
+        "pointsPerHour": 3,
+        "longitude": 15.577263,
+        "takeoverPoints": 155
+    },
+    {
+        "dateCreated": "2023-09-21T16:10:28+0000",
+        "dateLastTaken": "2024-09-23T14:31:48+0000",
+        "latitude": 58.419644,
+        "currentOwner": {
+            "name": "miawita",
+            "id": 63874
+        },
+        "name": "BratkorvH\u00e4r",
+        "id": 626447,
+        "totalTakeovers": 308,
+        "region": {
+            "country": "se",
+            "name": "\u00d6sterg\u00f6tland",
+            "id": 139
+        },
+        "pointsPerHour": 3,
+        "longitude": 15.571548,
+        "takeoverPoints": 155
+    },
+    {
+        "dateCreated": "2017-02-23T09:38:24+0000",
+        "dateLastTaken": "2024-09-23T10:55:18+0000",
+        "latitude": 58.406165,
+        "currentOwner": {
+            "name": "l355",
+            "id": 433488
+        },
+        "name": "M\u00e5rdor",
+        "id": 95727,
+        "totalTakeovers": 3508,
+        "region": {
+            "country": "se",
+            "name": "\u00d6sterg\u00f6tland",
+            "id": 139
+        },
+        "pointsPerHour": 6,
+        "longitude": 15.562236,
+        "takeoverPoints": 110
+    },
+    {
+        "dateCreated": "2017-08-19T07:00:00+0000",
+        "dateLastTaken": "2024-09-22T16:29:03+0000",
+        "latitude": 58.412745,
+        "currentOwner": {
+            "name": "senne",
+            "id": 13298
+        },
+        "name": "Corren",
+        "id": 117108,
+        "totalTakeovers": 4160,
+        "region": {
+            "country": "se",
+            "name": "\u00d6sterg\u00f6tland",
+            "id": 139
+        },
+        "pointsPerHour": 6,
+        "longitude": 15.558029,
+        "takeoverPoints": 110
+    },
+    {
+        "dateCreated": "2010-08-04T00:00:00+0000",
+        "dateLastTaken": "2024-09-23T11:04:26+0000",
+        "latitude": 58.409633,
+        "currentOwner": {
+            "name": "l355",
+            "id": 433488
+        },
+        "name": "HG",
+        "id": 82,
+        "totalTakeovers": 11376,
+        "region": {
+            "country": "se",
+            "name": "\u00d6sterg\u00f6tland",
+            "id": 139
+        },
+        "pointsPerHour": 6,
+        "longitude": 15.563393,
+        "takeoverPoints": 110
+    },
+    {
+        "dateCreated": "2010-08-04T00:00:00+0000",
+        "dateLastTaken": "2024-09-23T15:23:56+0000",
+        "latitude": 58.411543,
+        "currentOwner": {
+            "name": "l355",
+            "id": 433488
+        },
+        "name": "Kullen",
+        "id": 99,
+        "totalTakeovers": 7890,
+        "region": {
+            "country": "se",
+            "name": "\u00d6sterg\u00f6tland",
+            "id": 139
+        },
+        "pointsPerHour": 5,
+        "longitude": 15.567648,
+        "takeoverPoints": 125
+    },
+    {
+        "dateCreated": "2024-02-21T22:47:36+0000",
+        "dateLastTaken": "2024-09-23T15:20:48+0000",
+        "latitude": 58.409264,
+        "currentOwner": {
+            "name": "l355",
+            "id": 433488
+        },
+        "name": "TraktorFram\u00e5t",
+        "id": 655876,
+        "totalTakeovers": 688,
+        "region": {
+            "country": "se",
+            "name": "\u00d6sterg\u00f6tland",
+            "id": 139
+        },
+        "pointsPerHour": 6,
+        "longitude": 15.569469,
+        "takeoverPoints": 110
+    },
+    {
+        "dateCreated": "2013-12-24T08:51:08+0000",
+        "dateLastTaken": "2024-09-23T14:46:59+0000",
+        "latitude": 58.412547,
+        "currentOwner": {
+            "name": "Spiff",
+            "id": 75945
+        },
+        "name": "ToRyd",
+        "id": 23951,
+        "totalTakeovers": 10820,
+        "region": {
+            "country": "se",
+            "name": "\u00d6sterg\u00f6tland",
+            "id": 139
+        },
+        "pointsPerHour": 6,
+        "longitude": 15.577199,
+        "takeoverPoints": 110
+    },
+    {
+        "dateCreated": "2010-08-04T00:00:00+0000",
+        "dateLastTaken": "2024-09-23T14:39:11+0000",
+        "latitude": 58.404939,
+        "currentOwner": {
+            "name": "H\u00e4stnisse",
+            "id": 400527
+        },
+        "name": "Tunneln",
+        "id": 100,
+        "totalTakeovers": 11109,
+        "region": {
+            "country": "se",
+            "name": "\u00d6sterg\u00f6tland",
+            "id": 139
+        },
+        "pointsPerHour": 7,
+        "longitude": 15.567373,
+        "takeoverPoints": 95
+    }
+]
