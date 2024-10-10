@@ -1,7 +1,9 @@
+from datetime import datetime
+from util import TURF_TIME_FORMAT
 
 
 class Coordinate:
-    def __init__(self, lat, lon):
+    def __init__(self, lat: float, lon: float):
         self.lat = lat
         self.lon = lon
 
@@ -24,7 +26,7 @@ class Coordinate:
 
 
 class Zone:
-    def __init__(self, id, name, coords, tp, pph, date_created, total_takeovers):
+    def __init__(self, id: int, name: str, coords: Coordinate, tp: int, pph: int, date_created: datetime, total_takeovers: int):
         self.id = id
         self.name = name
         self.coords = coords
@@ -32,7 +34,6 @@ class Zone:
         self.pph = pph  # Points Per Hour
         self.date_created = date_created
         self.total_takeovers = total_takeovers
-        self.takeover_stats = None
 
     def __str__(self):
         return f"{self.name} (ID: {self.id}))"
@@ -41,13 +42,13 @@ class Zone:
         return self.id == other.id
 
     @staticmethod
-    def from_json(json):
+    def from_json(json: dict):
         return Zone(json['id'],
                     json['name'],
                     Coordinate(json['latitude'], json['longitude']),
                     json['takeoverPoints'],
                     json['pointsPerHour'],
-                    json['dateCreated'],    # TODO: Convert to datetime object
+                    datetime.strptime(json['dateCreated'], TURF_TIME_FORMAT),
                     json['totalTakeovers'])
 
     def to_json(self):
@@ -58,7 +59,7 @@ class Zone:
             'latitude': self.coords.lat,
             'takeoverPoints': self.tp,
             'pointsPerHour': self.pph,
-            'dateCreated': self.date_created,   # TODO: Convert from datetime object
+            'dateCreated': self.date_created.strftime(TURF_TIME_FORMAT),
             'totalTakeovers': self.total_takeovers
         }
 
@@ -77,7 +78,7 @@ class Area:
         return self.northeast == other.northeast and self.southwest == other.southwest and self.round_id == other.round_id
 
     @staticmethod
-    def from_json(json):
+    def from_json(json: dict):
         return Area(Coordinate.from_json(json['northEast']),
                     Coordinate.from_json(json['southWest']),
                     json['zones'],
