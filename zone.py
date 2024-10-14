@@ -1,28 +1,5 @@
 from datetime import datetime
-from util import TURF_TIME_FORMAT
-
-
-class Coordinate:
-    def __init__(self, lat: float, lon: float):
-        self.lat = lat
-        self.lon = lon
-
-    def __str__(self):
-        return f"({self.lat}, {self.lon})"
-
-    def __eq__(self, other):
-        return self.lat == other.lat and self.lon == other.lon
-
-    @staticmethod
-    def from_json(json):
-        return Coordinate(json['latitude'],
-                          json['longitude'])
-
-    def to_json(self):
-        return {
-            'latitude': self.lat,
-            'longitude': self.lon
-        }
+from util import Coordinate, TURF_TIME_FORMAT, sl_distance
 
 
 class Zone:
@@ -35,6 +12,8 @@ class Zone:
         self.date_created = date_created
         self.total_takeovers = total_takeovers
 
+        self.value = 1
+
     def __str__(self):
         return f"{self.name} (ID: {self.id}))"
 
@@ -42,14 +21,14 @@ class Zone:
         return self.id == other.id
 
     @staticmethod
-    def from_json(json: dict):
-        return Zone(json['id'],
-                    json['name'],
-                    Coordinate(json['latitude'], json['longitude']),
-                    json['takeoverPoints'],
-                    json['pointsPerHour'],
-                    datetime.strptime(json['dateCreated'], TURF_TIME_FORMAT),
-                    json['totalTakeovers'])
+    def from_json(zone_json: dict):
+        return Zone(zone_json['id'],
+                    zone_json['name'],
+                    Coordinate(zone_json['latitude'], zone_json['longitude']),
+                    zone_json['takeoverPoints'],
+                    zone_json['pointsPerHour'],
+                    datetime.strptime(zone_json['dateCreated'], TURF_TIME_FORMAT),
+                    zone_json['totalTakeovers'])
 
     def to_json(self):
         return {
@@ -63,32 +42,9 @@ class Zone:
             'totalTakeovers': self.total_takeovers
         }
 
-
-class Area:
-    def __init__(self, northeast, southwest, zones, round_id):
-        self.northeast = northeast
-        self.southwest = southwest
-        self.round_id = round_id
-        self.zones = zones
-
-    def __str__(self):
-        return f"(NW: {self.northeast}, SE: {self.southwest})"
-
-    def __eq__(self, other):
-        return self.northeast == other.northeast and self.southwest == other.southwest and self.round_id == other.round_id
-
     @staticmethod
-    def from_json(json: dict):
-        return Area(Coordinate.from_json(json['northEast']),
-                    Coordinate.from_json(json['southWest']),
-                    json['zones'],
-                    json['round_id'])
+    def fetch_zones_in_area(self, ne: Coordinate, sw: Coordinate, round_id: int):
+        pass
 
-    def to_json(self):
-        return {
-            'northEast': self.northeast.to_json(),
-            'southWest': self.southwest.to_json(),
-            'zones': [zone.to_json() for zone in self.zones],
-            'round_id': self.round_id
-        }
-
+    def distance_to(self, other_zone):
+        return sl_distance(self.coords, other_zone.coords)

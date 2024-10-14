@@ -53,6 +53,7 @@ def get_takeovers(zone_name, round_id):
 
 
 def get_zone_data(zone_name, round_id):
+    print('Getting data for', zone_name)
     takeovers = get_takeovers(zone_name, round_id)
 
     if not takeovers:

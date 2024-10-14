@@ -1,15 +1,53 @@
 import numpy as np
-from zone import Coordinate
 from datetime import datetime
 
 
 TURF_TIME_FORMAT = '%Y-%m-%dT%H:%M:%S%z'
 ZUNDIN_TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
+GRAPH_CONNECTEDNESS = 3
 
 
-def distance_m(coords1: Coordinate, coords2: Coordinate):
+class Coordinate:
+    def __init__(self, lat: float, lon: float):
+        self.lat = lat
+        self.lon = lon
+
+    def __str__(self):
+        return f"({self.lat}, {self.lon})"
+
+    def __add__(self, other):
+        if not isinstance(other, Coordinate):
+            raise ValueError("Only instances of Coordinate can be added together")
+        return Coordinate(self.lat + other.lat, self.lon + other.lon)
+
+    def __sub__(self, other):
+        if not isinstance(other, Coordinate):
+            raise ValueError("Only instances of Coordinate can be subtracted")
+        return Coordinate(self.lat - other.lat, self.lon - other.lon)
+
+    def __truediv__(self, scalar):
+        if scalar == 0:
+            raise ValueError("Cannot divide by zero")
+        return Coordinate(self.lat / scalar, self.lon / scalar)
+
+    def __eq__(self, other):
+        return self.lat == other.lat and self.lon == other.lon
+
+    @staticmethod
+    def from_json(coord_json):
+        return Coordinate(float(coord_json['latitude']),
+                          float(coord_json['longitude']))
+
+    def to_json(self):
+        return {
+            'latitude': self.lat,
+            'longitude': self.lon
+        }
+
+
+def sl_distance(coords1: Coordinate, coords2: Coordinate):
     """
-    Calculate the distance between two coordinates in meters.
+    Calculate the straight line distance between two coordinates in meters.
     """
 
     R = 6371000  # Earth radius in meters
@@ -40,3 +78,7 @@ def get_round_id(date: datetime):
         months_since_start -= 1
 
     return months_since_start
+
+
+def simple_cost(zone1, zone2):
+    return sl_distance(zone1.coords, zone2.coords) / zone2.value
