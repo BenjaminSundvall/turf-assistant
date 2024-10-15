@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_b13e3d62ecca5b6a58e0526c29a50f55 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/marslan390/BeautifyMarker/leaflet-beautify-marker-icon.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/marslan390/BeautifyMarker/leaflet-beautify-marker-icon.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_b13e3d62ecca5b6a58e0526c29a50f55" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_b13e3d62ecca5b6a58e0526c29a50f55 = L.map(
+                "map_b13e3d62ecca5b6a58e0526c29a50f55",
+                {
+                    center: [58.4109, 15.5658],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_3d12cbe75698242ca6930009b7289bb9 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_3d12cbe75698242ca6930009b7289bb9.addTo(map_b13e3d62ecca5b6a58e0526c29a50f55);
+        
+    
+            var feature_group_5f2bcd245e17a9d0220696f208c223b7 = L.featureGroup(
+                {}
+            );
+        
+    
+            var rectangle_5e497b09f8d884e523026cdc1384b5a3 = L.rectangle(
+                [[58.4001, 15.5428], [58.4217, 15.5888]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(feature_group_5f2bcd245e17a9d0220696f208c223b7);
+        
+    
+            feature_group_5f2bcd245e17a9d0220696f208c223b7.addTo(map_b13e3d62ecca5b6a58e0526c29a50f55);
+        
+    
+            var feature_group_2ff56002ef6c02c1cb61b47cb59f6b60 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_19cfb181e4c2a1c3dfd879477e89a318 = L.marker(
+                [58.412547, 15.577199],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_f446ce23c37ee0076d1e286171568df2 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "7", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_19cfb181e4c2a1c3dfd879477e89a318.setIcon(beautify_icon_f446ce23c37ee0076d1e286171568df2);
+        
+    
+        var popup_99c29fba82150c948e605f52067b17fa = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_add19e7ef0daf9ab6b09f4cd7d06c293 = $(`<div id="html_add19e7ef0daf9ab6b09f4cd7d06c293" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>ToRyd</h4>                     <p>Points: <b>95 / +7</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/23951UTC.png">                 </div>             </div>`)[0];
+                popup_99c29fba82150c948e605f52067b17fa.setContent(html_add19e7ef0daf9ab6b09f4cd7d06c293);
+            
+        
+
+        marker_19cfb181e4c2a1c3dfd879477e89a318.bindPopup(popup_99c29fba82150c948e605f52067b17fa)
+        ;
+
+        
+    
+    
+            var marker_35f91ca0bf0765c1a190e0528adcb30c = L.marker(
+                [58.415912, 15.581641],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_29e91e7f1c9d91a3e8286e170405431e = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "5", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_35f91ca0bf0765c1a190e0528adcb30c.setIcon(beautify_icon_29e91e7f1c9d91a3e8286e170405431e);
+        
+    
+        var popup_2551ebf896a62380d240d18cb449ebab = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_92e16cc5236dc08df4ca864f83eafdb1 = $(`<div id="html_92e16cc5236dc08df4ca864f83eafdb1" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>RydForest</h4>                     <p>Points: <b>125 / +5</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/580UTC.png">                 </div>             </div>`)[0];
+                popup_2551ebf896a62380d240d18cb449ebab.setContent(html_92e16cc5236dc08df4ca864f83eafdb1);
+            
+        
+
+        marker_35f91ca0bf0765c1a190e0528adcb30c.bindPopup(popup_2551ebf896a62380d240d18cb449ebab)
+        ;
+
+        
+    
+    
+            var marker_78f13ba80ecb26900bec3d03fdfb093a = L.marker(
+                [58.420934, 15.5862],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_88cab7102ac272cbfe651a8559c6e414 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "7", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_78f13ba80ecb26900bec3d03fdfb093a.setIcon(beautify_icon_88cab7102ac272cbfe651a8559c6e414);
+        
+    
+        var popup_944092d1b1abb7d451a102f0578851bc = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_c5e1ecdeba9dac5450a45cb9a296744a = $(`<div id="html_c5e1ecdeba9dac5450a45cb9a296744a" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>Beardway</h4>                     <p>Points: <b>95 / +7</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/585UTC.png">                 </div>             </div>`)[0];
+                popup_944092d1b1abb7d451a102f0578851bc.setContent(html_c5e1ecdeba9dac5450a45cb9a296744a);
+            
+        
+
+        marker_78f13ba80ecb26900bec3d03fdfb093a.bindPopup(popup_944092d1b1abb7d451a102f0578851bc)
+        ;
+
+        
+    
+    
+            var marker_17662356293f5a2acde85f213a9c640e = L.marker(
+                [58.404939, 15.567373],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_56ac91cb325374d4eadfaf5f8ff393ed = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "8", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_17662356293f5a2acde85f213a9c640e.setIcon(beautify_icon_56ac91cb325374d4eadfaf5f8ff393ed);
+        
+    
+        var popup_c7669e09d9e208d101a6f426bc229022 = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_fa86ad20a06518e3f9fdff96acff623f = $(`<div id="html_fa86ad20a06518e3f9fdff96acff623f" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>Tunneln</h4>                     <p>Points: <b>80 / +8</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/100UTC.png">                 </div>             </div>`)[0];
+                popup_c7669e09d9e208d101a6f426bc229022.setContent(html_fa86ad20a06518e3f9fdff96acff623f);
+            
+        
+
+        marker_17662356293f5a2acde85f213a9c640e.bindPopup(popup_c7669e09d9e208d101a6f426bc229022)
+        ;
+
+        
+    
+    
+            var marker_7720bf959632e5e38c65925f0dd3a788 = L.marker(
+                [58.41538, 15.545957],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_332a6931baa686bf90f6238cc94da99e = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "4", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_7720bf959632e5e38c65925f0dd3a788.setIcon(beautify_icon_332a6931baa686bf90f6238cc94da99e);
+        
+    
+        var popup_a853d4420ed9d23c6cbb3ecb614b7699 = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_1f4f1539e6a26728c3102c79f3df3b69 = $(`<div id="html_1f4f1539e6a26728c3102c79f3df3b69" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>Glyttinge</h4>                     <p>Points: <b>140 / +4</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/128590UTC.png">                 </div>             </div>`)[0];
+                popup_a853d4420ed9d23c6cbb3ecb614b7699.setContent(html_1f4f1539e6a26728c3102c79f3df3b69);
+            
+        
+
+        marker_7720bf959632e5e38c65925f0dd3a788.bindPopup(popup_a853d4420ed9d23c6cbb3ecb614b7699)
+        ;
+
+        
+    
+    
+            var marker_48561c4502e75a2b06eab6396d9d2866 = L.marker(
+                [58.408526, 15.578409],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_ac55a3daacecec9635af0ffc475ce2b4 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "5", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_48561c4502e75a2b06eab6396d9d2866.setIcon(beautify_icon_ac55a3daacecec9635af0ffc475ce2b4);
+        
+    
+        var popup_10d8ccb1809a7ddfe444364843f6f7be = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_3092a20ef68d0370594f619f8b087b75 = $(`<div id="html_3092a20ef68d0370594f619f8b087b75" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>5an</h4>                     <p>Points: <b>125 / +5</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/128589UTC.png">                 </div>             </div>`)[0];
+                popup_10d8ccb1809a7ddfe444364843f6f7be.setContent(html_3092a20ef68d0370594f619f8b087b75);
+            
+        
+
+        marker_48561c4502e75a2b06eab6396d9d2866.bindPopup(popup_10d8ccb1809a7ddfe444364843f6f7be)
+        ;
+
+        
+    
+    
+            var marker_22bd8e80622bc4d067340205cf47367a = L.marker(
+                [58.408578, 15.587882],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_ab2d76118959eb5aa4d37ef7eac34354 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "7", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_22bd8e80622bc4d067340205cf47367a.setIcon(beautify_icon_ab2d76118959eb5aa4d37ef7eac34354);
+        
+    
+        var popup_9a3f167b774562802363e050413a9beb = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_62c35a24675de9ba967f8f728929b829 = $(`<div id="html_62c35a24675de9ba967f8f728929b829" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>Cupolen</h4>                     <p>Points: <b>95 / +7</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/221153UTC.png">                 </div>             </div>`)[0];
+                popup_9a3f167b774562802363e050413a9beb.setContent(html_62c35a24675de9ba967f8f728929b829);
+            
+        
+
+        marker_22bd8e80622bc4d067340205cf47367a.bindPopup(popup_9a3f167b774562802363e050413a9beb)
+        ;
+
+        
+    
+    
+            var marker_79a8f8be346153e069672f5e9efb840f = L.marker(
+                [58.408349, 15.574113],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_e57f9694c953bcd7fa4faf2e0603529f = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "7", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_79a8f8be346153e069672f5e9efb840f.setIcon(beautify_icon_e57f9694c953bcd7fa4faf2e0603529f);
+        
+    
+        var popup_60966c49cf8b432e05c6b03742bffba6 = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_652dba25104d7d95a256ddb1af9e3d6b = $(`<div id="html_652dba25104d7d95a256ddb1af9e3d6b" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>RydEast</h4>                     <p>Points: <b>95 / +7</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/8306UTC.png">                 </div>             </div>`)[0];
+                popup_60966c49cf8b432e05c6b03742bffba6.setContent(html_652dba25104d7d95a256ddb1af9e3d6b);
+            
+        
+
+        marker_79a8f8be346153e069672f5e9efb840f.bindPopup(popup_60966c49cf8b432e05c6b03742bffba6)
+        ;
+
+        
+    
+    
+            var marker_74ba0d27add5e62c4b6f4baa3d816f26 = L.marker(
+                [58.411523, 15.572157],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_f8e3fa785337c11045f7e44aee73f439 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "8", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_74ba0d27add5e62c4b6f4baa3d816f26.setIcon(beautify_icon_f8e3fa785337c11045f7e44aee73f439);
+        
+    
+        var popup_97ea8c2e835e1d58ddee5bf35933da3f = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_2d34167146a3a98325ae236e416ce19f = $(`<div id="html_2d34167146a3a98325ae236e416ce19f" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>PaleRyder</h4>                     <p>Points: <b>80 / +8</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/178624UTC.png">                 </div>             </div>`)[0];
+                popup_97ea8c2e835e1d58ddee5bf35933da3f.setContent(html_2d34167146a3a98325ae236e416ce19f);
+            
+        
+
+        marker_74ba0d27add5e62c4b6f4baa3d816f26.bindPopup(popup_97ea8c2e835e1d58ddee5bf35933da3f)
+        ;
+
+        
+    
+    
+            var marker_443d1a9a845b29f76826586089085f89 = L.marker(
+                [58.416986, 15.574294],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_a29013b30f91b9c5ad5428a01cf89c50 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "4", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_443d1a9a845b29f76826586089085f89.setIcon(beautify_icon_a29013b30f91b9c5ad5428a01cf89c50);
+        
+    
+        var popup_113f9fe26c6bfaa5d49627ddd0a5cc2d = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_ea6bb8c7ad737e7786ffcd3bd6f8e441 = $(`<div id="html_ea6bb8c7ad737e7786ffcd3bd6f8e441" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>RödaSpåret</h4>                     <p>Points: <b>140 / +4</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/34618UTC.png">                 </div>             </div>`)[0];
+                popup_113f9fe26c6bfaa5d49627ddd0a5cc2d.setContent(html_ea6bb8c7ad737e7786ffcd3bd6f8e441);
+            
+        
+
+        marker_443d1a9a845b29f76826586089085f89.bindPopup(popup_113f9fe26c6bfaa5d49627ddd0a5cc2d)
+        ;
+
+        
+    
+    
+            var marker_838b51490617a0e48bc4791604576657 = L.marker(
+                [58.404738, 15.571913],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_53fa63f93538f355c6b60b5c81efc153 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "8", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_838b51490617a0e48bc4791604576657.setIcon(beautify_icon_53fa63f93538f355c6b60b5c81efc153);
+        
+    
+        var popup_d7ff99678dbade46ef6270ea4d16f272 = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_493d61bce99133826bb335c9197fc7d4 = $(`<div id="html_493d61bce99133826bb335c9197fc7d4" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>LinköpingGK</h4>                     <p>Points: <b>80 / +8</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/599350UTC.png">                 </div>             </div>`)[0];
+                popup_d7ff99678dbade46ef6270ea4d16f272.setContent(html_493d61bce99133826bb335c9197fc7d4);
+            
+        
+
+        marker_838b51490617a0e48bc4791604576657.bindPopup(popup_d7ff99678dbade46ef6270ea4d16f272)
+        ;
+
+        
+    
+    
+            var marker_70a44fd03c453ea239247e25e37032fc = L.marker(
+                [58.401776, 15.573164],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_eefac658a4e081bba4aadbb6f970047f = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "7", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_70a44fd03c453ea239247e25e37032fc.setIcon(beautify_icon_eefac658a4e081bba4aadbb6f970047f);
+        
+    
+        var popup_e5383c2fcdbc4b2efa24d024e24b5f52 = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_ca50a3c6e81c4b87cd1f92b347930ae1 = $(`<div id="html_ca50a3c6e81c4b87cd1f92b347930ae1" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>LiUzone</h4>                     <p>Points: <b>95 / +7</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/2573UTC.png">                 </div>             </div>`)[0];
+                popup_e5383c2fcdbc4b2efa24d024e24b5f52.setContent(html_ca50a3c6e81c4b87cd1f92b347930ae1);
+            
+        
+
+        marker_70a44fd03c453ea239247e25e37032fc.bindPopup(popup_e5383c2fcdbc4b2efa24d024e24b5f52)
+        ;
+
+        
+    
+    
+            var marker_09926c13327d882530b736a99bd182a0 = L.marker(
+                [58.417718, 15.584118],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_ba44b66e85c8d6bf1623b9ac907b2d16 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "6", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_09926c13327d882530b736a99bd182a0.setIcon(beautify_icon_ba44b66e85c8d6bf1623b9ac907b2d16);
+        
+    
+        var popup_cd688ed11813d0508c8702b5a876ef50 = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_e1b0b071d22e52afe616fc9cd46c4b74 = $(`<div id="html_e1b0b071d22e52afe616fc9cd46c4b74" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>Måsbacken</h4>                     <p>Points: <b>110 / +6</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/419022UTC.png">                 </div>             </div>`)[0];
+                popup_cd688ed11813d0508c8702b5a876ef50.setContent(html_e1b0b071d22e52afe616fc9cd46c4b74);
+            
+        
+
+        marker_09926c13327d882530b736a99bd182a0.bindPopup(popup_cd688ed11813d0508c8702b5a876ef50)
+        ;
+
+        
+    
+    
+            var marker_136e7861e1c9d096ef58051bdc663881 = L.marker(
+                [58.40981, 15.583749],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_99bc090615f5dc4c90772281cc958973 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "7", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_136e7861e1c9d096ef58051bdc663881.setIcon(beautify_icon_99bc090615f5dc4c90772281cc958973);
+        
+    
+        var popup_1fcb939b02ff46fbc2538704835595d2 = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_2d3463a38797317d08e8015188b3c428 = $(`<div id="html_2d3463a38797317d08e8015188b3c428" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>YellowTrack</h4>                     <p>Points: <b>95 / +7</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/60709UTC.png">                 </div>             </div>`)[0];
+                popup_1fcb939b02ff46fbc2538704835595d2.setContent(html_2d3463a38797317d08e8015188b3c428);
+            
+        
+
+        marker_136e7861e1c9d096ef58051bdc663881.bindPopup(popup_1fcb939b02ff46fbc2538704835595d2)
+        ;
+
+        
+    
+    
+            var marker_179e71a876e84ef7b126a30206a9abc6 = L.marker(
+                [58.404018, 15.563982],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_294ddfcb7d97ee69ebdab7aa757cd82b = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "8", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_179e71a876e84ef7b126a30206a9abc6.setIcon(beautify_icon_294ddfcb7d97ee69ebdab7aa757cd82b);
+        
+    
+        var popup_7c364251baaf3718611978857c5725a3 = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_e7f74080ed70ad0049b8de441cab70a0 = $(`<div id="html_e7f74080ed70ad0049b8de441cab70a0" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>OffMalmslätt</h4>                     <p>Points: <b>80 / +8</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/599349UTC.png">                 </div>             </div>`)[0];
+                popup_7c364251baaf3718611978857c5725a3.setContent(html_e7f74080ed70ad0049b8de441cab70a0);
+            
+        
+
+        marker_179e71a876e84ef7b126a30206a9abc6.bindPopup(popup_7c364251baaf3718611978857c5725a3)
+        ;
+
+        
+    
+    
+            var marker_5a346bc0101552dbc6a8d2dba1ef9ee5 = L.marker(
+                [58.40211, 15.555661],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_0f2eb1531cbf25b64a68d2be82c1b64a = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "8", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_5a346bc0101552dbc6a8d2dba1ef9ee5.setIcon(beautify_icon_0f2eb1531cbf25b64a68d2be82c1b64a);
+        
+    
+        var popup_d96ab77f5ffd9d70045f81b6b5513db6 = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_b229a0276eb740455c04936d8a0f941b = $(`<div id="html_b229a0276eb740455c04936d8a0f941b" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>Järnfyran</h4>                     <p>Points: <b>80 / +8</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/599348UTC.png">                 </div>             </div>`)[0];
+                popup_d96ab77f5ffd9d70045f81b6b5513db6.setContent(html_b229a0276eb740455c04936d8a0f941b);
+            
+        
+
+        marker_5a346bc0101552dbc6a8d2dba1ef9ee5.bindPopup(popup_d96ab77f5ffd9d70045f81b6b5513db6)
+        ;
+
+        
+    
+    
+            var marker_307c81a9f2dcc425f3014ed7e1247f76 = L.marker(
+                [58.403709, 15.559263],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_7451d7702d72c2b1bd83d19d57d24b76 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "8", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_307c81a9f2dcc425f3014ed7e1247f76.setIcon(beautify_icon_7451d7702d72c2b1bd83d19d57d24b76);
+        
+    
+        var popup_b03c2f0a6899a184db6f4e434ec11e26 = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_55038332183205adc41069418d2bea8d = $(`<div id="html_55038332183205adc41069418d2bea8d" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>MoreThanRhi</h4>                     <p>Points: <b>80 / +8</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/599351UTC.png">                 </div>             </div>`)[0];
+                popup_b03c2f0a6899a184db6f4e434ec11e26.setContent(html_55038332183205adc41069418d2bea8d);
+            
+        
+
+        marker_307c81a9f2dcc425f3014ed7e1247f76.bindPopup(popup_b03c2f0a6899a184db6f4e434ec11e26)
+        ;
+
+        
+    
+    
+            var marker_af56f115a917213ef1f07f520732216d = L.marker(
+                [58.407924, 15.549572],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_a182c6a1bde1939652dc0cbf53bb7f32 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "6", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_af56f115a917213ef1f07f520732216d.setIcon(beautify_icon_a182c6a1bde1939652dc0cbf53bb7f32);
+        
+    
+        var popup_36d7e4b013eabdaa6dc7bad618f84943 = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_71c0865c96aab5df5507b76cb4ced8aa = $(`<div id="html_71c0865c96aab5df5507b76cb4ced8aa" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>MalmenRoad</h4>                     <p>Points: <b>110 / +6</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/11926UTC.png">                 </div>             </div>`)[0];
+                popup_36d7e4b013eabdaa6dc7bad618f84943.setContent(html_71c0865c96aab5df5507b76cb4ced8aa);
+            
+        
+
+        marker_af56f115a917213ef1f07f520732216d.bindPopup(popup_36d7e4b013eabdaa6dc7bad618f84943)
+        ;
+
+        
+    
+    
+            var marker_4a8511b152b3eeef2599c5f666e20a22 = L.marker(
+                [58.404322, 15.553723],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_9d1436aa5eae18db441fcd3b1778b788 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "7", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_4a8511b152b3eeef2599c5f666e20a22.setIcon(beautify_icon_9d1436aa5eae18db441fcd3b1778b788);
+        
+    
+        var popup_881e361a5ef849bc238cb821d60b70b4 = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_b2635936dc9f59a24d7e7fc90141d1ed = $(`<div id="html_b2635936dc9f59a24d7e7fc90141d1ed" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>MalmenView</h4>                     <p>Points: <b>95 / +7</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/11925UTC.png">                 </div>             </div>`)[0];
+                popup_881e361a5ef849bc238cb821d60b70b4.setContent(html_b2635936dc9f59a24d7e7fc90141d1ed);
+            
+        
+
+        marker_4a8511b152b3eeef2599c5f666e20a22.bindPopup(popup_881e361a5ef849bc238cb821d60b70b4)
+        ;
+
+        
+    
+    
+            var marker_78ae3c39da2435d30c67690ed93da90d = L.marker(
+                [58.407617, 15.555313],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_ea0e53c588080dbadad71f1ba96b1c69 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "5", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_78ae3c39da2435d30c67690ed93da90d.setIcon(beautify_icon_ea0e53c588080dbadad71f1ba96b1c69);
+        
+    
+        var popup_af36bff83951466ebaea24b0d5c079a5 = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_97bb7fa6adc54621dff3e9ddea3ae03a = $(`<div id="html_97bb7fa6adc54621dff3e9ddea3ae03a" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>BallCorner</h4>                     <p>Points: <b>125 / +5</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/2941UTC.png">                 </div>             </div>`)[0];
+                popup_af36bff83951466ebaea24b0d5c079a5.setContent(html_97bb7fa6adc54621dff3e9ddea3ae03a);
+            
+        
+
+        marker_78ae3c39da2435d30c67690ed93da90d.bindPopup(popup_af36bff83951466ebaea24b0d5c079a5)
+        ;
+
+        
+    
+    
+            var marker_85bb885237932c4a78f8c9530a910bc9 = L.marker(
+                [58.415128, 15.567744],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_32241e3dfac3d77937d3da9445647f9d = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "7", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_85bb885237932c4a78f8c9530a910bc9.setIcon(beautify_icon_32241e3dfac3d77937d3da9445647f9d);
+        
+    
+        var popup_443ad977c1cfda2b79ff08f587f6cc0e = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_64aecef799870ae26a45bc49295d8fcd = $(`<div id="html_64aecef799870ae26a45bc49295d8fcd" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>VillaRyd</h4>                     <p>Points: <b>95 / +7</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/34619UTC.png">                 </div>             </div>`)[0];
+                popup_443ad977c1cfda2b79ff08f587f6cc0e.setContent(html_64aecef799870ae26a45bc49295d8fcd);
+            
+        
+
+        marker_85bb885237932c4a78f8c9530a910bc9.bindPopup(popup_443ad977c1cfda2b79ff08f587f6cc0e)
+        ;
+
+        
+    
+    
+            var marker_3b1888d288aecf7c9c659d7bc184e18c = L.marker(
+                [58.417095, 15.564525],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_93d390490322e0a052bdbbd49ec75c1e = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "7", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_3b1888d288aecf7c9c659d7bc184e18c.setIcon(beautify_icon_93d390490322e0a052bdbbd49ec75c1e);
+        
+    
+        var popup_5ec96330ce4467615e67475ed5cc3514 = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_ac9c2b5cf7ef91d88e9bb757d2551cab = $(`<div id="html_ac9c2b5cf7ef91d88e9bb757d2551cab" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>Nobel1916</h4>                     <p>Points: <b>95 / +7</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/356762UTC.png">                 </div>             </div>`)[0];
+                popup_5ec96330ce4467615e67475ed5cc3514.setContent(html_ac9c2b5cf7ef91d88e9bb757d2551cab);
+            
+        
+
+        marker_3b1888d288aecf7c9c659d7bc184e18c.bindPopup(popup_5ec96330ce4467615e67475ed5cc3514)
+        ;
+
+        
+    
+    
+            var marker_d7d3dfe217a39e40cd714c91280f38a3 = L.marker(
+                [58.415745, 15.560768],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_c8822ee45f037f477abb8dd8feae714c = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "7", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_d7d3dfe217a39e40cd714c91280f38a3.setIcon(beautify_icon_c8822ee45f037f477abb8dd8feae714c);
+        
+    
+        var popup_70b76ff3ccc9d1d4ed21a92079e0a7bd = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_58e1757b342adc830c4002a32832545f = $(`<div id="html_58e1757b342adc830c4002a32832545f" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>Atterbom</h4>                     <p>Points: <b>95 / +7</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/2572UTC.png">                 </div>             </div>`)[0];
+                popup_70b76ff3ccc9d1d4ed21a92079e0a7bd.setContent(html_58e1757b342adc830c4002a32832545f);
+            
+        
+
+        marker_d7d3dfe217a39e40cd714c91280f38a3.bindPopup(popup_70b76ff3ccc9d1d4ed21a92079e0a7bd)
+        ;
+
+        
+    
+    
+            var marker_938fc9cbeaf1cdb2135f81eb6603f33a = L.marker(
+                [58.416993, 15.556909],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_8eeaec412e712d342f452b1d103541e5 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "7", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_938fc9cbeaf1cdb2135f81eb6603f33a.setIcon(beautify_icon_8eeaec412e712d342f452b1d103541e5);
+        
+    
+        var popup_f8f49adfc14175811c2a2d26843aa725 = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_3f8cad21f7a7b5a6bbd37335c2a4bf36 = $(`<div id="html_3f8cad21f7a7b5a6bbd37335c2a4bf36" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>LeopoldsZon</h4>                     <p>Points: <b>95 / +7</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/626448UTC.png">                 </div>             </div>`)[0];
+                popup_f8f49adfc14175811c2a2d26843aa725.setContent(html_3f8cad21f7a7b5a6bbd37335c2a4bf36);
+            
+        
+
+        marker_938fc9cbeaf1cdb2135f81eb6603f33a.bindPopup(popup_f8f49adfc14175811c2a2d26843aa725)
+        ;
+
+        
+    
+    
+            var marker_f553db9d2c538e040827733bdcf0ed43 = L.marker(
+                [58.411964, 15.561761],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_20be011ba5a629ff02364450a631f9bd = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "7", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_f553db9d2c538e040827733bdcf0ed43.setIcon(beautify_icon_20be011ba5a629ff02364450a631f9bd);
+        
+    
+        var popup_ac382d352454cf50717cbfc4deec3e0e = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_1f73f018bbed67fd87c14450877e3ca6 = $(`<div id="html_1f73f018bbed67fd87c14450877e3ca6" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>StudentRyd</h4>                     <p>Points: <b>95 / +7</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/483431UTC.png">                 </div>             </div>`)[0];
+                popup_ac382d352454cf50717cbfc4deec3e0e.setContent(html_1f73f018bbed67fd87c14450877e3ca6);
+            
+        
+
+        marker_f553db9d2c538e040827733bdcf0ed43.bindPopup(popup_ac382d352454cf50717cbfc4deec3e0e)
+        ;
+
+        
+    
+    
+            var marker_3bec8beb013c4a32e2a410557f4f154b = L.marker(
+                [58.418824, 15.555588],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_cb15ecfe9b7e45cd489e157ad85ebc37 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "4", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_3bec8beb013c4a32e2a410557f4f154b.setIcon(beautify_icon_cb15ecfe9b7e45cd489e157ad85ebc37);
+        
+    
+        var popup_4cd145193838891042b9cdd8d481dccd = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_f0bc6893664b29219dac4d6bfa7c2432 = $(`<div id="html_f0bc6893664b29219dac4d6bfa7c2432" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>MountainWater</h4>                     <p>Points: <b>140 / +4</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/70110UTC.png">                 </div>             </div>`)[0];
+                popup_4cd145193838891042b9cdd8d481dccd.setContent(html_f0bc6893664b29219dac4d6bfa7c2432);
+            
+        
+
+        marker_3bec8beb013c4a32e2a410557f4f154b.bindPopup(popup_4cd145193838891042b9cdd8d481dccd)
+        ;
+
+        
+    
+    
+            var marker_8fb949453d305270f3ce0bf59fe2e8d2 = L.marker(
+                [58.42119, 15.567924],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_ffbc2d179647df71383021d52f14f7cf = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "5", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_8fb949453d305270f3ce0bf59fe2e8d2.setIcon(beautify_icon_ffbc2d179647df71383021d52f14f7cf);
+        
+    
+        var popup_d2062cc71a52b98bab056cb83094413b = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_4b996a010a79f29c5bb46ee0235a7e25 = $(`<div id="html_4b996a010a79f29c5bb46ee0235a7e25" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>FarForest</h4>                     <p>Points: <b>125 / +5</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/1760UTC.png">                 </div>             </div>`)[0];
+                popup_d2062cc71a52b98bab056cb83094413b.setContent(html_4b996a010a79f29c5bb46ee0235a7e25);
+            
+        
+
+        marker_8fb949453d305270f3ce0bf59fe2e8d2.bindPopup(popup_d2062cc71a52b98bab056cb83094413b)
+        ;
+
+        
+    
+    
+            var marker_33f43554a28cf398f7450377ace671f6 = L.marker(
+                [58.419589, 15.577263],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_06ecf039f0c427c9908abebf7ad4dc6e = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "5", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_33f43554a28cf398f7450377ace671f6.setIcon(beautify_icon_06ecf039f0c427c9908abebf7ad4dc6e);
+        
+    
+        var popup_0315e8c2f3edae5fa8bedba98d3d290d = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_349178791a70edcf52e7e688b7c7d5d2 = $(`<div id="html_349178791a70edcf52e7e688b7c7d5d2" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>GulaSpåret</h4>                     <p>Points: <b>125 / +5</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/34617UTC.png">                 </div>             </div>`)[0];
+                popup_0315e8c2f3edae5fa8bedba98d3d290d.setContent(html_349178791a70edcf52e7e688b7c7d5d2);
+            
+        
+
+        marker_33f43554a28cf398f7450377ace671f6.bindPopup(popup_0315e8c2f3edae5fa8bedba98d3d290d)
+        ;
+
+        
+    
+    
+            var marker_73739adfafa341fe0d5fde209760debb = L.marker(
+                [58.419644, 15.571548],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_5bb8a97bd7b567df094dc69e53f06fd8 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "5", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_73739adfafa341fe0d5fde209760debb.setIcon(beautify_icon_5bb8a97bd7b567df094dc69e53f06fd8);
+        
+    
+        var popup_76bb68df6ee2cf5c68f2cc742f0958fa = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_99feda036f44dbd0c01670e1820f0d38 = $(`<div id="html_99feda036f44dbd0c01670e1820f0d38" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>BratkorvHär</h4>                     <p>Points: <b>125 / +5</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/626447UTC.png">                 </div>             </div>`)[0];
+                popup_76bb68df6ee2cf5c68f2cc742f0958fa.setContent(html_99feda036f44dbd0c01670e1820f0d38);
+            
+        
+
+        marker_73739adfafa341fe0d5fde209760debb.bindPopup(popup_76bb68df6ee2cf5c68f2cc742f0958fa)
+        ;
+
+        
+    
+    
+            var marker_e2e0424d3ce9ca3b66dfed667e925d59 = L.marker(
+                [58.400861, 15.585739],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_233050d140e4eb58538f2adab71611fa = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "7", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_e2e0424d3ce9ca3b66dfed667e925d59.setIcon(beautify_icon_233050d140e4eb58538f2adab71611fa);
+        
+    
+        var popup_7cdc81c18cbbb8a4a5fc08ba8c36451e = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_d51ee22df5071a05521b7bd0267e0bfd = $(`<div id="html_d51ee22df5071a05521b7bd0267e0bfd" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>VarningFörTåg</h4>                     <p>Points: <b>95 / +7</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/97909UTC.png">                 </div>             </div>`)[0];
+                popup_7cdc81c18cbbb8a4a5fc08ba8c36451e.setContent(html_d51ee22df5071a05521b7bd0267e0bfd);
+            
+        
+
+        marker_e2e0424d3ce9ca3b66dfed667e925d59.bindPopup(popup_7cdc81c18cbbb8a4a5fc08ba8c36451e)
+        ;
+
+        
+    
+    
+            var marker_8b9604c972cf68ab28695f18eeff0227 = L.marker(
+                [58.406165, 15.562236],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_b4886233e057c4c298e38941b09e6e85 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "7", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_8b9604c972cf68ab28695f18eeff0227.setIcon(beautify_icon_b4886233e057c4c298e38941b09e6e85);
+        
+    
+        var popup_ff30e0e6ede95fb28049c82a3c024a14 = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_9676f810b86ba00a44128ae66b2ba226 = $(`<div id="html_9676f810b86ba00a44128ae66b2ba226" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>Mårdor</h4>                     <p>Points: <b>95 / +7</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/95727UTC.png">                 </div>             </div>`)[0];
+                popup_ff30e0e6ede95fb28049c82a3c024a14.setContent(html_9676f810b86ba00a44128ae66b2ba226);
+            
+        
+
+        marker_8b9604c972cf68ab28695f18eeff0227.bindPopup(popup_ff30e0e6ede95fb28049c82a3c024a14)
+        ;
+
+        
+    
+    
+            var marker_7f8e1be9fdb70a01355cfa2eedcd8b6b = L.marker(
+                [58.412745, 15.558029],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_e10d7512826172fbab8ebc62f852cbc0 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "7", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_7f8e1be9fdb70a01355cfa2eedcd8b6b.setIcon(beautify_icon_e10d7512826172fbab8ebc62f852cbc0);
+        
+    
+        var popup_53a8247217ff0e6f3516398068c731a1 = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_48022123a127ae1f18671176a213c871 = $(`<div id="html_48022123a127ae1f18671176a213c871" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>Corren</h4>                     <p>Points: <b>95 / +7</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/117108UTC.png">                 </div>             </div>`)[0];
+                popup_53a8247217ff0e6f3516398068c731a1.setContent(html_48022123a127ae1f18671176a213c871);
+            
+        
+
+        marker_7f8e1be9fdb70a01355cfa2eedcd8b6b.bindPopup(popup_53a8247217ff0e6f3516398068c731a1)
+        ;
+
+        
+    
+    
+            var marker_886acb2fc95a91e5a958fbc6b82859ed = L.marker(
+                [58.409633, 15.563393],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_61904e96f8d4dbc2be07f945f11ad088 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "8", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_886acb2fc95a91e5a958fbc6b82859ed.setIcon(beautify_icon_61904e96f8d4dbc2be07f945f11ad088);
+        
+    
+        var popup_faef6389dbf94de3cefa25089157b99b = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_b3f18b2b5fed6fdfcc3a9bc3e1291e01 = $(`<div id="html_b3f18b2b5fed6fdfcc3a9bc3e1291e01" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>HG</h4>                     <p>Points: <b>80 / +8</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/82UTC.png">                 </div>             </div>`)[0];
+                popup_faef6389dbf94de3cefa25089157b99b.setContent(html_b3f18b2b5fed6fdfcc3a9bc3e1291e01);
+            
+        
+
+        marker_886acb2fc95a91e5a958fbc6b82859ed.bindPopup(popup_faef6389dbf94de3cefa25089157b99b)
+        ;
+
+        
+    
+    
+            var marker_426b09d596f2ad82815a6c4dc075c4b1 = L.marker(
+                [58.411543, 15.567648],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_41ffd356d034158452c30c03964bb87e = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "7", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_426b09d596f2ad82815a6c4dc075c4b1.setIcon(beautify_icon_41ffd356d034158452c30c03964bb87e);
+        
+    
+        var popup_7c561c0681616fd4dc27ba3a396b2b35 = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_34796442e799a470176d6a6e6531d469 = $(`<div id="html_34796442e799a470176d6a6e6531d469" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>Kullen</h4>                     <p>Points: <b>95 / +7</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/99UTC.png">                 </div>             </div>`)[0];
+                popup_7c561c0681616fd4dc27ba3a396b2b35.setContent(html_34796442e799a470176d6a6e6531d469);
+            
+        
+
+        marker_426b09d596f2ad82815a6c4dc075c4b1.bindPopup(popup_7c561c0681616fd4dc27ba3a396b2b35)
+        ;
+
+        
+    
+    
+            var marker_18bcfd15261a9372c05a31c919d5611b = L.marker(
+                [58.409264, 15.569469],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_accb0d14a7448d155dc8ae3ec74188cb = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "7", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_18bcfd15261a9372c05a31c919d5611b.setIcon(beautify_icon_accb0d14a7448d155dc8ae3ec74188cb);
+        
+    
+        var popup_9ac6d333372bc90733f6dc129720178b = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_6cf53b87f1a13dbce7c1d960defac8e4 = $(`<div id="html_6cf53b87f1a13dbce7c1d960defac8e4" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>TraktorFramåt</h4>                     <p>Points: <b>95 / +7</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/655876UTC.png">                 </div>             </div>`)[0];
+                popup_9ac6d333372bc90733f6dc129720178b.setContent(html_6cf53b87f1a13dbce7c1d960defac8e4);
+            
+        
+
+        marker_18bcfd15261a9372c05a31c919d5611b.bindPopup(popup_9ac6d333372bc90733f6dc129720178b)
+        ;
+
+        
+    
+    
+            var marker_28651310b1e6d3c3b387e60e09b8bd23 = L.marker(
+                [58.404273, 15.577608],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_37145f128952a0d4f387ef551d03c814 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "8", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_28651310b1e6d3c3b387e60e09b8bd23.setIcon(beautify_icon_37145f128952a0d4f387ef551d03c814);
+        
+    
+        var popup_7e039a74f7e9de44781321d2ff56cdc0 = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_adbe130f7102f5eb59e242515beb18bf = $(`<div id="html_adbe130f7102f5eb59e242515beb18bf" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>PatchSlope</h4>                     <p>Points: <b>80 / +8</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/92UTC.png">                 </div>             </div>`)[0];
+                popup_7e039a74f7e9de44781321d2ff56cdc0.setContent(html_adbe130f7102f5eb59e242515beb18bf);
+            
+        
+
+        marker_28651310b1e6d3c3b387e60e09b8bd23.bindPopup(popup_7e039a74f7e9de44781321d2ff56cdc0)
+        ;
+
+        
+    
+    
+            var marker_fadff9cc7d07353bc980d220472ea2fc = L.marker(
+                [58.400462, 15.578206],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_ebdaef121db8aba8d47eaa865280c212 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "7", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_fadff9cc7d07353bc980d220472ea2fc.setIcon(beautify_icon_ebdaef121db8aba8d47eaa865280c212);
+        
+    
+        var popup_986495bd9098d67890cd8fb8b8d23592 = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_b421b40ac17e0a5c36cdc5aace010a0c = $(`<div id="html_b421b40ac17e0a5c36cdc5aace010a0c" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>Kårallen</h4>                     <p>Points: <b>95 / +7</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/91UTC.png">                 </div>             </div>`)[0];
+                popup_986495bd9098d67890cd8fb8b8d23592.setContent(html_b421b40ac17e0a5c36cdc5aace010a0c);
+            
+        
+
+        marker_fadff9cc7d07353bc980d220472ea2fc.bindPopup(popup_986495bd9098d67890cd8fb8b8d23592)
+        ;
+
+        
+    
+    
+            var marker_8ffa705f168e1168ceef6a0d3afa9816 = L.marker(
+                [58.413119, 15.584758],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_8da7ea68b003b1d9b69a1d1bcdeb4bd7 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "8", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_8ffa705f168e1168ceef6a0d3afa9816.setIcon(beautify_icon_8da7ea68b003b1d9b69a1d1bcdeb4bd7);
+        
+    
+        var popup_81056572be42c420ebf60994ca70592f = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_23a393f1d0ab0edc54acd84777a67cdf = $(`<div id="html_23a393f1d0ab0edc54acd84777a67cdf" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>SoccerInWoods</h4>                     <p>Points: <b>80 / +8</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/80UTC.png">                 </div>             </div>`)[0];
+                popup_81056572be42c420ebf60994ca70592f.setContent(html_23a393f1d0ab0edc54acd84777a67cdf);
+            
+        
+
+        marker_8ffa705f168e1168ceef6a0d3afa9816.bindPopup(popup_81056572be42c420ebf60994ca70592f)
+        ;
+
+        
+    
+    
+            var marker_4c32aac1477d439efdc197a04a08ebd5 = L.marker(
+                [58.406592, 15.582949],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_923acd6edea8b2053a29fe5448082f50 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "8", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_4c32aac1477d439efdc197a04a08ebd5.setIcon(beautify_icon_923acd6edea8b2053a29fe5448082f50);
+        
+    
+        var popup_927dbc33ea574c122982151c88d65d2c = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_143004d865b6b17f97fb6cef6ae6d899 = $(`<div id="html_143004d865b6b17f97fb6cef6ae6d899" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>VallaCircle</h4>                     <p>Points: <b>80 / +8</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/79UTC.png">                 </div>             </div>`)[0];
+                popup_927dbc33ea574c122982151c88d65d2c.setContent(html_143004d865b6b17f97fb6cef6ae6d899);
+            
+        
+
+        marker_4c32aac1477d439efdc197a04a08ebd5.bindPopup(popup_927dbc33ea574c122982151c88d65d2c)
+        ;
+
+        
+    
+    
+            var marker_3afa01d51c66550efb28f1b5d9253437 = L.marker(
+                [58.401579, 15.588733],
+                {}
+            ).addTo(feature_group_2ff56002ef6c02c1cb61b47cb59f6b60);
+        
+    
+            var beautify_icon_76c70bbd717a05560dab4c36f781e3a5 = new L.BeautifyIcon.icon(
+                {"backgroundColor": "white", "borderColor": "#1A9641", "borderWidth": 3, "icon": "7", "iconShape": "circle", "innerIconStyle": "", "isAlphaNumericIcon": false, "spin": false, "textColor": "black"}
+            )
+            marker_3afa01d51c66550efb28f1b5d9253437.setIcon(beautify_icon_76c70bbd717a05560dab4c36f781e3a5);
+        
+    
+        var popup_b71dee4538c57ba0ab497c97ae9266a3 = L.popup({"maxWidth": "100%", "offset": [2, 70]});
+
+        
+            
+                var html_bd0e0befdf6d5e1a90691c0bee2d35f8 = $(`<div id="html_bd0e0befdf6d5e1a90691c0bee2d35f8" style="width: 100.0%; height: 100.0%;">                 <div style="width: 300px;">                     <h4>Svartgrisen</h4>                     <p>Points: <b>95 / +7</b></p>                     <img style="max-width: 100%; height: auto; padding-top: 10px;"                         src="https://warded.se/turf/img/zones/17569UTC.png">                 </div>             </div>`)[0];
+                popup_b71dee4538c57ba0ab497c97ae9266a3.setContent(html_bd0e0befdf6d5e1a90691c0bee2d35f8);
+            
+        
+
+        marker_3afa01d51c66550efb28f1b5d9253437.bindPopup(popup_b71dee4538c57ba0ab497c97ae9266a3)
+        ;
+
+        
+    
+    
+            feature_group_2ff56002ef6c02c1cb61b47cb59f6b60.addTo(map_b13e3d62ecca5b6a58e0526c29a50f55);
+        
+    
+            var feature_group_b7237a9c061562c6cc50c7efebf4bd22 = L.featureGroup(
+                {}
+            );
+        
+    
+            var marker_dd48eb3eab4006e3f21d8b9fa464c157 = L.marker(
+                [58.412547, 15.577199],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_cfeae7f2db3f36f4e487adebecb58aab = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eToRyd\u003c/p\u003e\n                    \u003cp\u003e95 / +7\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_dd48eb3eab4006e3f21d8b9fa464c157.setIcon(div_icon_cfeae7f2db3f36f4e487adebecb58aab);
+        
+    
+            var marker_621bbdae3ae27245785ebb7c74296632 = L.marker(
+                [58.415912, 15.581641],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_8d3d10d02979a2f6e0feb62dd2771a66 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eRydForest\u003c/p\u003e\n                    \u003cp\u003e125 / +5\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_621bbdae3ae27245785ebb7c74296632.setIcon(div_icon_8d3d10d02979a2f6e0feb62dd2771a66);
+        
+    
+            var marker_a92e17e34c720c6c64a2876db795c222 = L.marker(
+                [58.420934, 15.5862],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_766f63600002d3f70eba7923b0f524c7 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eBeardway\u003c/p\u003e\n                    \u003cp\u003e95 / +7\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_a92e17e34c720c6c64a2876db795c222.setIcon(div_icon_766f63600002d3f70eba7923b0f524c7);
+        
+    
+            var marker_339a22e5d9d1508e271cdf849dfab842 = L.marker(
+                [58.404939, 15.567373],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_9c074abd9d809d8e962b91611fa3268e = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eTunneln\u003c/p\u003e\n                    \u003cp\u003e80 / +8\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_339a22e5d9d1508e271cdf849dfab842.setIcon(div_icon_9c074abd9d809d8e962b91611fa3268e);
+        
+    
+            var marker_ba823e470067bf30acaa0cd85f6b2123 = L.marker(
+                [58.41538, 15.545957],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_520678575fea47e99e9d89a70785d422 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eGlyttinge\u003c/p\u003e\n                    \u003cp\u003e140 / +4\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_ba823e470067bf30acaa0cd85f6b2123.setIcon(div_icon_520678575fea47e99e9d89a70785d422);
+        
+    
+            var marker_cfa4cc4ab824bcb0b8c0f485686c4343 = L.marker(
+                [58.408526, 15.578409],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_d58ab05af1dda787fe14ad0e666a13d4 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003e5an\u003c/p\u003e\n                    \u003cp\u003e125 / +5\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_cfa4cc4ab824bcb0b8c0f485686c4343.setIcon(div_icon_d58ab05af1dda787fe14ad0e666a13d4);
+        
+    
+            var marker_a7051345e119babdd350e6399aa98be7 = L.marker(
+                [58.408578, 15.587882],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_1dd8db733827f5cae6fbd8b422735c47 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eCupolen\u003c/p\u003e\n                    \u003cp\u003e95 / +7\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_a7051345e119babdd350e6399aa98be7.setIcon(div_icon_1dd8db733827f5cae6fbd8b422735c47);
+        
+    
+            var marker_65c9c9cd9327a524a5222afb44475c11 = L.marker(
+                [58.408349, 15.574113],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_bf6bcc3aa13c94e7147eaa4325816263 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eRydEast\u003c/p\u003e\n                    \u003cp\u003e95 / +7\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_65c9c9cd9327a524a5222afb44475c11.setIcon(div_icon_bf6bcc3aa13c94e7147eaa4325816263);
+        
+    
+            var marker_9aa12c0de7f4d3f414086932981b2eb3 = L.marker(
+                [58.411523, 15.572157],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_d16f88bc312b22e970a0a43e866cd994 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003ePaleRyder\u003c/p\u003e\n                    \u003cp\u003e80 / +8\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_9aa12c0de7f4d3f414086932981b2eb3.setIcon(div_icon_d16f88bc312b22e970a0a43e866cd994);
+        
+    
+            var marker_0d8626542f0522a3af3ca2391a389611 = L.marker(
+                [58.416986, 15.574294],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_279b12e19e8ba53d7e9c585d27b1f40e = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eR\u00f6daSp\u00e5ret\u003c/p\u003e\n                    \u003cp\u003e140 / +4\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_0d8626542f0522a3af3ca2391a389611.setIcon(div_icon_279b12e19e8ba53d7e9c585d27b1f40e);
+        
+    
+            var marker_98cb6799ae83d8a3ff0a88da4e4f0cd1 = L.marker(
+                [58.404738, 15.571913],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_4fb1a4393ac7488b6222323f1239b889 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eLink\u00f6pingGK\u003c/p\u003e\n                    \u003cp\u003e80 / +8\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_98cb6799ae83d8a3ff0a88da4e4f0cd1.setIcon(div_icon_4fb1a4393ac7488b6222323f1239b889);
+        
+    
+            var marker_f312b60aab1f0743e93addcfbe8a64b3 = L.marker(
+                [58.401776, 15.573164],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_68a85acced05e915bd183a1d38739988 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eLiUzone\u003c/p\u003e\n                    \u003cp\u003e95 / +7\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_f312b60aab1f0743e93addcfbe8a64b3.setIcon(div_icon_68a85acced05e915bd183a1d38739988);
+        
+    
+            var marker_833a8b9557f03d1c4abfbea87fd576ed = L.marker(
+                [58.417718, 15.584118],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_3beaf637912bf5cd5a3578b8a147f64c = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eM\u00e5sbacken\u003c/p\u003e\n                    \u003cp\u003e110 / +6\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_833a8b9557f03d1c4abfbea87fd576ed.setIcon(div_icon_3beaf637912bf5cd5a3578b8a147f64c);
+        
+    
+            var marker_4dd19672e3bc690bc4be2270cb916ef9 = L.marker(
+                [58.40981, 15.583749],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_ff7bd191a4afa920dd043dcc461d74fc = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eYellowTrack\u003c/p\u003e\n                    \u003cp\u003e95 / +7\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_4dd19672e3bc690bc4be2270cb916ef9.setIcon(div_icon_ff7bd191a4afa920dd043dcc461d74fc);
+        
+    
+            var marker_b33ad19ff3c4e9cf6687f2f0e9e37fa4 = L.marker(
+                [58.404018, 15.563982],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_16d4e09365a4a1df095ef1ddc267dba1 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eOffMalmsl\u00e4tt\u003c/p\u003e\n                    \u003cp\u003e80 / +8\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_b33ad19ff3c4e9cf6687f2f0e9e37fa4.setIcon(div_icon_16d4e09365a4a1df095ef1ddc267dba1);
+        
+    
+            var marker_aa6a9af6a5375e1af07788ad2db50a60 = L.marker(
+                [58.40211, 15.555661],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_007ec263a3e8c866ecc046d71a8e5a14 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eJ\u00e4rnfyran\u003c/p\u003e\n                    \u003cp\u003e80 / +8\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_aa6a9af6a5375e1af07788ad2db50a60.setIcon(div_icon_007ec263a3e8c866ecc046d71a8e5a14);
+        
+    
+            var marker_da087dfbcea179da0e50d60b93b25a35 = L.marker(
+                [58.403709, 15.559263],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_88f15bf4643f27e8db5441aa664e3c8f = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eMoreThanRhi\u003c/p\u003e\n                    \u003cp\u003e80 / +8\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_da087dfbcea179da0e50d60b93b25a35.setIcon(div_icon_88f15bf4643f27e8db5441aa664e3c8f);
+        
+    
+            var marker_c39b38afc9b55c9be8f4415677f96628 = L.marker(
+                [58.407924, 15.549572],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_f41b0101b86965c8ace51214c6eaba48 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eMalmenRoad\u003c/p\u003e\n                    \u003cp\u003e110 / +6\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_c39b38afc9b55c9be8f4415677f96628.setIcon(div_icon_f41b0101b86965c8ace51214c6eaba48);
+        
+    
+            var marker_8cfb13b5fde857604af9c86aa154bc24 = L.marker(
+                [58.404322, 15.553723],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_1ff0ec4523319698c9d959ba4b48f07c = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eMalmenView\u003c/p\u003e\n                    \u003cp\u003e95 / +7\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_8cfb13b5fde857604af9c86aa154bc24.setIcon(div_icon_1ff0ec4523319698c9d959ba4b48f07c);
+        
+    
+            var marker_ce2c5827b7109b9f6a08b031edcf5556 = L.marker(
+                [58.407617, 15.555313],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_8f52be32ad54790d2ff1303811dbd02b = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eBallCorner\u003c/p\u003e\n                    \u003cp\u003e125 / +5\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_ce2c5827b7109b9f6a08b031edcf5556.setIcon(div_icon_8f52be32ad54790d2ff1303811dbd02b);
+        
+    
+            var marker_5847b73cf75e377a0e6d37dcb3f01c1f = L.marker(
+                [58.415128, 15.567744],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_d3a15b09c877acd4d8558d8de5dc37de = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eVillaRyd\u003c/p\u003e\n                    \u003cp\u003e95 / +7\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_5847b73cf75e377a0e6d37dcb3f01c1f.setIcon(div_icon_d3a15b09c877acd4d8558d8de5dc37de);
+        
+    
+            var marker_655ee71ea6284c00ad5551029e550ec8 = L.marker(
+                [58.417095, 15.564525],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_ee3b5279211bf0dee96d4e51721cccba = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eNobel1916\u003c/p\u003e\n                    \u003cp\u003e95 / +7\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_655ee71ea6284c00ad5551029e550ec8.setIcon(div_icon_ee3b5279211bf0dee96d4e51721cccba);
+        
+    
+            var marker_ea82fa8de72ede4cb21439b69ffbdc44 = L.marker(
+                [58.415745, 15.560768],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_fb77f7ccacc1ad5d025392e1dd055a2a = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eAtterbom\u003c/p\u003e\n                    \u003cp\u003e95 / +7\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_ea82fa8de72ede4cb21439b69ffbdc44.setIcon(div_icon_fb77f7ccacc1ad5d025392e1dd055a2a);
+        
+    
+            var marker_30e52c693604ca742b2f3604a3be4909 = L.marker(
+                [58.416993, 15.556909],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_5728bf9240f10a422e315f1fea9939d2 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eLeopoldsZon\u003c/p\u003e\n                    \u003cp\u003e95 / +7\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_30e52c693604ca742b2f3604a3be4909.setIcon(div_icon_5728bf9240f10a422e315f1fea9939d2);
+        
+    
+            var marker_505f541ca82e2138863661b5e98eefaa = L.marker(
+                [58.411964, 15.561761],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_5f780ca588014a2364c90940c10e0079 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eStudentRyd\u003c/p\u003e\n                    \u003cp\u003e95 / +7\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_505f541ca82e2138863661b5e98eefaa.setIcon(div_icon_5f780ca588014a2364c90940c10e0079);
+        
+    
+            var marker_3ba814dff955d3bfd5d62d81c4222429 = L.marker(
+                [58.418824, 15.555588],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_736d0d4e3b0d1e8b7fe3593e759f2517 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eMountainWater\u003c/p\u003e\n                    \u003cp\u003e140 / +4\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_3ba814dff955d3bfd5d62d81c4222429.setIcon(div_icon_736d0d4e3b0d1e8b7fe3593e759f2517);
+        
+    
+            var marker_98ffaffcb3076cae107e4342f2fc2522 = L.marker(
+                [58.42119, 15.567924],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_3a0b77d857e681d591f7b413910508a5 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eFarForest\u003c/p\u003e\n                    \u003cp\u003e125 / +5\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_98ffaffcb3076cae107e4342f2fc2522.setIcon(div_icon_3a0b77d857e681d591f7b413910508a5);
+        
+    
+            var marker_28a89853b5e6122edf50b32af5d826b6 = L.marker(
+                [58.419589, 15.577263],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_ead90d0ed259181afcb13013d74a13e5 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eGulaSp\u00e5ret\u003c/p\u003e\n                    \u003cp\u003e125 / +5\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_28a89853b5e6122edf50b32af5d826b6.setIcon(div_icon_ead90d0ed259181afcb13013d74a13e5);
+        
+    
+            var marker_2a6b66dd7647ab44ee0cc308588a0d7e = L.marker(
+                [58.419644, 15.571548],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_adba9716a1d47ccbc38d89642e9a5f99 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eBratkorvH\u00e4r\u003c/p\u003e\n                    \u003cp\u003e125 / +5\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_2a6b66dd7647ab44ee0cc308588a0d7e.setIcon(div_icon_adba9716a1d47ccbc38d89642e9a5f99);
+        
+    
+            var marker_60f3f89c00ba6f9cbdb69ecbf3e71709 = L.marker(
+                [58.400861, 15.585739],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_9f5210db736d3f86b7daa45fb2e9a436 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eVarningF\u00f6rT\u00e5g\u003c/p\u003e\n                    \u003cp\u003e95 / +7\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_60f3f89c00ba6f9cbdb69ecbf3e71709.setIcon(div_icon_9f5210db736d3f86b7daa45fb2e9a436);
+        
+    
+            var marker_4144adf4ffb5dcd07f0ddd6532ba1c92 = L.marker(
+                [58.406165, 15.562236],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_8b27813c6f8e3ef7ae6dba24dc5f5386 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eM\u00e5rdor\u003c/p\u003e\n                    \u003cp\u003e95 / +7\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_4144adf4ffb5dcd07f0ddd6532ba1c92.setIcon(div_icon_8b27813c6f8e3ef7ae6dba24dc5f5386);
+        
+    
+            var marker_62ad0ba82f6c708c1c939bc83c186178 = L.marker(
+                [58.412745, 15.558029],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_edd723810e1576f2cd74e16308a2ad00 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eCorren\u003c/p\u003e\n                    \u003cp\u003e95 / +7\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_62ad0ba82f6c708c1c939bc83c186178.setIcon(div_icon_edd723810e1576f2cd74e16308a2ad00);
+        
+    
+            var marker_00b1d983dc8be4ab4e1946db4e9d6414 = L.marker(
+                [58.409633, 15.563393],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_ee1608fd278b592c535a36e47a657d1b = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eHG\u003c/p\u003e\n                    \u003cp\u003e80 / +8\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_00b1d983dc8be4ab4e1946db4e9d6414.setIcon(div_icon_ee1608fd278b592c535a36e47a657d1b);
+        
+    
+            var marker_1339c23c28b20819e1fb83399b18bd91 = L.marker(
+                [58.411543, 15.567648],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_bc81248fc554e4f54d56b07aaa6ef2d7 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eKullen\u003c/p\u003e\n                    \u003cp\u003e95 / +7\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_1339c23c28b20819e1fb83399b18bd91.setIcon(div_icon_bc81248fc554e4f54d56b07aaa6ef2d7);
+        
+    
+            var marker_e5092556bf089fa8340dcc245ea67dfa = L.marker(
+                [58.409264, 15.569469],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_76f438276c4455b81412a4b516f3ea7c = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eTraktorFram\u00e5t\u003c/p\u003e\n                    \u003cp\u003e95 / +7\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_e5092556bf089fa8340dcc245ea67dfa.setIcon(div_icon_76f438276c4455b81412a4b516f3ea7c);
+        
+    
+            var marker_a7e78f9803c6f9e68c03b1ba0ef7c779 = L.marker(
+                [58.404273, 15.577608],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_47cda04b506ee1abd099f1cf115e06be = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003ePatchSlope\u003c/p\u003e\n                    \u003cp\u003e80 / +8\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_a7e78f9803c6f9e68c03b1ba0ef7c779.setIcon(div_icon_47cda04b506ee1abd099f1cf115e06be);
+        
+    
+            var marker_ff2d80e743c5cb6e68af6939c6bd1fc4 = L.marker(
+                [58.400462, 15.578206],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_1a5234d698acd6d62d33c75fad50a1a5 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eK\u00e5rallen\u003c/p\u003e\n                    \u003cp\u003e95 / +7\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_ff2d80e743c5cb6e68af6939c6bd1fc4.setIcon(div_icon_1a5234d698acd6d62d33c75fad50a1a5);
+        
+    
+            var marker_47e7d530cf9583a34cadecfb77b7bb4c = L.marker(
+                [58.413119, 15.584758],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_1fdb6540000792a80dc0a1f8c4b86252 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eSoccerInWoods\u003c/p\u003e\n                    \u003cp\u003e80 / +8\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_47e7d530cf9583a34cadecfb77b7bb4c.setIcon(div_icon_1fdb6540000792a80dc0a1f8c4b86252);
+        
+    
+            var marker_41cc7196bc0c35a188fd31eab8779976 = L.marker(
+                [58.406592, 15.582949],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_d2b9893e4fb7c9ad4e7b2354ebb788af = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eVallaCircle\u003c/p\u003e\n                    \u003cp\u003e80 / +8\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_41cc7196bc0c35a188fd31eab8779976.setIcon(div_icon_d2b9893e4fb7c9ad4e7b2354ebb788af);
+        
+    
+            var marker_1fd4a4584ee5774427260756dd4bb183 = L.marker(
+                [58.401579, 15.588733],
+                {}
+            ).addTo(feature_group_b7237a9c061562c6cc50c7efebf4bd22);
+        
+    
+            var div_icon_fbad65ed1ba2af3520d2492b3ce167c2 = L.divIcon({"className": "empty", "html": "\n            \u003cdiv style=\"width: 150px; height: 30px; text-align: center;\n                        line-height: 0.5; font-weight: bold;\"\u003e\n                \u003cdiv style=\"height:30px; background-color: rgba(0, 0, 0, 0.5);\n                            border-radius: 5px; padding: 5px;\n                            color: white; display: inline-block;\"\u003e\n                    \u003cp\u003eSvartgrisen\u003c/p\u003e\n                    \u003cp\u003e95 / +7\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            ", "iconAnchor": [75, -15], "iconSize": [150, 30]});
+            marker_1fd4a4584ee5774427260756dd4bb183.setIcon(div_icon_fbad65ed1ba2af3520d2492b3ce167c2);
+        
+    
+            feature_group_b7237a9c061562c6cc50c7efebf4bd22.addTo(map_b13e3d62ecca5b6a58e0526c29a50f55);
+        
+    
+            var layer_control_90a4c4435b477dbc1647e7395d6cd42c_layers = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_3d12cbe75698242ca6930009b7289bb9,
+                },
+                overlays :  {
+                    "Bounding Box" : feature_group_5f2bcd245e17a9d0220696f208c223b7,
+                    "Zone Markers" : feature_group_2ff56002ef6c02c1cb61b47cb59f6b60,
+                    "Zone Names" : feature_group_b7237a9c061562c6cc50c7efebf4bd22,
+                },
+            };
+            let layer_control_90a4c4435b477dbc1647e7395d6cd42c = L.control.layers(
+                layer_control_90a4c4435b477dbc1647e7395d6cd42c_layers.base_layers,
+                layer_control_90a4c4435b477dbc1647e7395d6cd42c_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_b13e3d62ecca5b6a58e0526c29a50f55);
+
+        
+</script>
+</html>

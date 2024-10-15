@@ -1,7 +1,6 @@
-from util import Coordinate
 from typing import List
 
-from zone import Zone
+from turfclasses import Coordinate, Zone
 
 class Area:
     def __init__(self, northeast: Coordinate, southwest: Coordinate, zones: List[Zone], round_id: int):

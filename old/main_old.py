@@ -5,7 +5,7 @@ import os
 
 import heapq
 
-from zundin_scraper import get_zone_data
+from old_zundin_scraper import get_zone_data
 from gui import draw_map
 from graph_old import Graph, ZoneEdge, ZoneNode, calculate_distance_meters
 

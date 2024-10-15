@@ -7,45 +7,7 @@ ZUNDIN_TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
 GRAPH_CONNECTEDNESS = 3
 
 
-class Coordinate:
-    def __init__(self, lat: float, lon: float):
-        self.lat = lat
-        self.lon = lon
-
-    def __str__(self):
-        return f"({self.lat}, {self.lon})"
-
-    def __add__(self, other):
-        if not isinstance(other, Coordinate):
-            raise ValueError("Only instances of Coordinate can be added together")
-        return Coordinate(self.lat + other.lat, self.lon + other.lon)
-
-    def __sub__(self, other):
-        if not isinstance(other, Coordinate):
-            raise ValueError("Only instances of Coordinate can be subtracted")
-        return Coordinate(self.lat - other.lat, self.lon - other.lon)
-
-    def __truediv__(self, scalar):
-        if scalar == 0:
-            raise ValueError("Cannot divide by zero")
-        return Coordinate(self.lat / scalar, self.lon / scalar)
-
-    def __eq__(self, other):
-        return self.lat == other.lat and self.lon == other.lon
-
-    @staticmethod
-    def from_json(coord_json):
-        return Coordinate(float(coord_json['latitude']),
-                          float(coord_json['longitude']))
-
-    def to_json(self):
-        return {
-            'latitude': self.lat,
-            'longitude': self.lon
-        }
-
-
-def sl_distance(coords1: Coordinate, coords2: Coordinate):
+def sl_distance(coords1, coords2):
     """
     Calculate the straight line distance between two coordinates in meters.
     """
@@ -62,17 +24,22 @@ def sl_distance(coords1: Coordinate, coords2: Coordinate):
     return R * c
 
 
-def get_round_id(date: datetime):
-    """
-    Calculate the round id of a current date.
-    """
+def get_round_start(date: datetime):
+    """ Calculate datetime for round start of the given month (first sunday of the month at 12 pm). """
+    first_weekday_of_month = date.replace(day=1).weekday()
+    round_start = date.replace(day=1 + (6 - first_weekday_of_month) % 7, hour=12, minute=0, second=0, microsecond=0)
+
+    return round_start
+
+
+def get_round_from_date(date: datetime):
+    """ Calculate the round id of a current date. """
 
     start_date = datetime(2010, 7, 10)
     months_since_start = 1 + (date.year - start_date.year) * 12 + date.month - start_date.month
 
     # Calculate datetime for round start this month (first sunday of he month at 12 pm)
-    first_weekday_of_month = date.replace(day=1).weekday()
-    round_start = date.replace(day=1 + (6 - first_weekday_of_month) % 7, hour=12, minute=0, second=0, microsecond=0)
+    round_start = get_round_start(date)
 
     if date < round_start:
         months_since_start -= 1

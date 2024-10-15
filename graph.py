@@ -1,5 +1,5 @@
 from util import GRAPH_CONNECTEDNESS
-from zone import Zone
+from turfclasses import Zone
 
 
 class Edge:
@@ -23,6 +23,9 @@ class Node:
     def add_edge(self, edge: Edge):
         assert type(edge) == Edge, f"{edge} ({type(edge)}) is not of type Edge!"
         self.edges.append(edge)
+
+    def remove_edge(self, edge: Edge):
+        self.edges.remove(edge)
 
     def __str__(self):
         return f"Node: {self.zone.name}"

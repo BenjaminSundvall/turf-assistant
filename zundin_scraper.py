@@ -1,87 +1,63 @@
-from datetime import datetime
-from bs4 import BeautifulSoup
 import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+from datetime import datetime
 import os
-import numpy as np
 
-TURF_TIME_FORMAT = '%Y-%m-%dT%H:%M:%S%z'
-ZUNDIN_TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
+class ZundinScraper:
+    BASE_URL = "https://frut.zundin.se/zone.php?"
+    ZUNDIN_TIME_FORMAT = '%Y-%m-%d %H:%M:%S'
 
+    def __init__(self):
+        pass
 
-def get_takeovers(zone_name, round_id):
-    takeovers = []
+    def get_takeover_data(self, zone_name, round_id):
+        """Fetch historical takeover data for a specific zone by its name and round ID"""
+        filename = f"takeover_data/{zone_name}_{round_id}.csv"
 
-    filename = 'zundin_data/zundin_' + zone_name + '_' + round_id + '.html'
-    soup = None
+        # Check for cached data
+        if os.path.exists(filename):
+            print(f"{filename} already exists. Loading from file.")
+            df = pd.read_csv(filename)
+            return df
 
-    # If file exists, read from file, otherwise download file
-    if os.path.exists(filename):
-        # print('Reading from', filename)
-        with open(filename, 'r') as file:
-            soup = BeautifulSoup(file, 'html.parser')
-    else:
-        url = 'https://frut.zundin.se/zone.php?zonename=' + zone_name + '&roundid=' + round_id
-        # print('Downloading', filename, 'from', url)
+        # Scrape data from zundin
+        print(f"{filename} not found. Scraping from zundin.")
+        url = f"{self.BASE_URL}zonename={zone_name}&roundid={round_id}"
         response = requests.get(url)
-        soup = BeautifulSoup(response.content, 'html.parser')
-        with open(filename, 'w') as file:
-            file.write(soup.prettify())
+        if response.status_code == 200:
+            df = self.parse_takeover_data(response.text, round_id)
+            self.save_to_csv(df, filename)
+            return df
+        else:
+            print(f"Error fetching data for zone {zone_name}: {response.status_code}")
+            return None
 
-    # Find the table containing the zone takeovers
-    table = soup.find(id='roundTakeovers').find('table')
+    def parse_takeover_data(self, html, round_id):
+        """Parse historical takeover data from HTML"""
+        takeovers = []
+        soup = BeautifulSoup(html, 'html.parser')
 
-    # Extract rows from the table body and add data to takeover list
-    for tr in table.select('tr')[1:-1]:
-        takeover = {}
+        if not soup.find(id='roundTakeovers'):
+            print("No takeover data found.")
+            return None
 
-        # Raw data
-        takeover['who'] = tr.select('td')[0].text.strip()
-        takeover['points'] = tr.select('td')[1].text.strip()
-        takeover['duration'] = tr.select('td')[2].text.strip()
-        takeover['datetime'] = tr.select('td')[3].select('script')[0].text.strip()[29:-4]
-        dt = datetime.strptime(takeover['datetime'], ZUNDIN_TIME_FORMAT)
-        # print('Datetime:', dt)
+        table = soup.find(id='roundTakeovers').find('table')  # Assuming the data is in a table
+        for tr in table.select('tr')[1:-1]:
+            takeover = {}
 
-        # Derived data
-        takeover['date'] = dt.day   # 1-31
-        takeover['hour'] = dt.hour  # 0-23
-        takeover['weekday'] = dt.isoweekday()   # 1-7 (Monday is 1)
+            takeover['user'] = tr.select('td')[0].text.strip()
+            takeover['points'] = tr.select('td')[1].text.strip()
+            takeover['duration'] = tr.select('td')[2].text.strip()
+            takeover['date'] = tr.select('td')[3].select('script')[0].text.strip()[29:-4]
 
-        takeovers.append(takeover)
+            # dt = datetime.strptime(takeover['date'], self.ZUNDIN_TIME_FORMAT)
 
-    return takeovers
+            takeovers.append(takeover)
 
+        return pd.DataFrame(takeovers)
 
-def get_zone_data(zone_name, round_id):
-    print('Getting data for', zone_name)
-    takeovers = get_takeovers(zone_name, round_id)
-
-    if not takeovers:
-        return None
-
-    zone_data = {
-        'name': zone_name,
-        'round_id': round_id,
-        'takeovers': takeovers,
-        'value': 0,
-        'stdev_points': 0,
-        'takes_hourly': [0] * 24,
-        'zundin_url': 'https://frut.zundin.se/zone.php?zonename=' + zone_name + '&roundid=' + round_id
-    }
-
-    points = []
-
-    for takeover in takeovers:
-        # Ignore assists
-        if not takeover['duration']:
-            continue
-
-        points.append(int(takeover['points']))
-        zone_data['takes_hourly'][takeover['hour']] += 1
-
-    # Calculate zone value
-    zone_data['value'] = np.mean(points)
-    zone_data['stdev_points'] = np.std(points)
-
-
-    return zone_data
+    def save_to_csv(self, df, filename):
+        """Save historical data to a CSV file"""
+        df.to_csv(filename, index=False)
+        print(f"  {filename} saved successfully.")

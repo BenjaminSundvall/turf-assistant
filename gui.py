@@ -2,36 +2,36 @@ import folium
 import folium.plugins as plugins
 from typing import List
 
-from zone import Zone
+from turfclasses import Zone
 from area import Area
 from graph import Graph
-from util import Coordinate, GRAPH_CONNECTEDNESS
+from util import GRAPH_CONNECTEDNESS
 
 
 class GUI:
-    def __init__(self, center: Coordinate):
+    def __init__(self, center):
         self.center = center
 
-    def draw_bbox(self, ne: Coordinate, sw: Coordinate, info_text: str):
+    def draw_bbox(self, ne, sw, info_text):
         raise NotImplementedError("Not implemented, call a subclass!")
 
-    def draw_zones(self, zones: List[Zone]):
+    def draw_zones(self, zones):
         raise NotImplementedError("Not implemented, call a subclass!")
 
-    def draw_graph(self, graph: Graph):
+    def draw_graph(self, graph):
         raise NotImplementedError("Not implemented, call a subclass!")
 
-    def save_map(self, filename: str):
+    def save_map(self, filename):
         raise NotImplementedError("Not implemented, call a subclass!")
 
 
 class FoliumGUI(GUI):
-    def __init__(self, center: Coordinate, zoom_start: int=14):
+    def __init__(self, center, zoom_start=14):
         super().__init__(center)
         self.map = folium.Map(location=(center.lat, center.lon), zoom_start=zoom_start)
 
 
-    def draw_bbox(self, ne: Coordinate, sw: Coordinate, info_text: str):
+    def draw_bbox(self, ne, sw):
         bbox_group = folium.FeatureGroup(name='Bounding Box', show=True).add_to(self.map)
 
         # Draw bounding box
@@ -41,45 +41,26 @@ class FoliumGUI(GUI):
             fill=False,
         ).add_to(bbox_group)
 
-        # Add text box
-        folium.Marker(
-            (sw.lat, sw.lon),
-            icon=folium.features.DivIcon(
-                icon_size=(150,36),
-                icon_anchor=(0,0),
-                html=info_text,
-            )
-        ).add_to(bbox_group)
 
-
-    def draw_zones(self, zones: List[Zone]):
+    def draw_zones(self, zones):
         marker_group = folium.FeatureGroup(name='Zone Markers', show=True).add_to(self.map)
         nametag_group = folium.FeatureGroup(name='Zone Names', show=True).add_to(self.map)
 
         for zone in zones:
-            zone_icon = str(zone.pph)
+            zone_icon = str(zone.points_per_hour)
             zone_color = '#1A9641'
-            stdev_points = -1
-            pts_diff = -1
-            zundin_url = ''
 
-
-            # Create marker
+            # Draw zone marker
             popup_html = f"""
                 <div style="width: 300px;">
                     <h4>{zone.name}</h4>
-                    <p>Points: <b>{zone.tp} / +{zone.pph}</b></p>
-                    <p>
-                        Value: <b>{zone.value:.1f} ± {stdev_points:.1f}</b>
-                        ({abs(pts_diff):.1f} {'above' if pts_diff > 0 else 'below'} average)
-                    </p>
-                    <a href="{zundin_url}">Full takeover log</a>
+                    <p>Points: <b>{zone.takeover_points} / +{zone.points_per_hour}</b></p>
                     <img style="max-width: 100%; height: auto; padding-top: 10px;"
                         src="https://warded.se/turf/img/zones/{zone.id}UTC.png">
                 </div>
             """
             folium.Marker(
-                location=[zone.coords.lat, zone.coords.lon],
+                location=zone.coordinate.to_list(),
                 icon=plugins.BeautifyIcon(icon=zone_icon,
                                             icon_shape='circle',
                                             border_color=zone_color,
@@ -88,7 +69,7 @@ class FoliumGUI(GUI):
                 popup=folium.Popup(html=popup_html, offset=(2, 70)),
             ).add_to(marker_group)
 
-            # Create Nametag
+            # Draw nametag
             nametag_html = f"""
             <div style="width: 150px; height: 30px; text-align: center;
                         line-height: 0.5; font-weight: bold;">
@@ -96,19 +77,19 @@ class FoliumGUI(GUI):
                             border-radius: 5px; padding: 5px;
                             color: white; display: inline-block;">
                     <p>{zone.name}</p>
-                    <p>{zone.value:.1f} ({'+' if pts_diff > 0 else '-'}{abs(pts_diff):.1f})</p>
+                    <p>{zone.takeover_points} / +{zone.points_per_hour}</p>
                 </div>
             </div>
             """
             folium.Marker(
-                location=[zone.coords.lat, zone.coords.lon],
+                location=zone.coordinate.to_list(),
                 icon=folium.DivIcon(icon_size=(150, 30),
                                     icon_anchor=(75, -15),
                                     html=nametag_html)
             ).add_to(nametag_group)
 
 
-    def draw_graph(self, graph: Graph):
+    def draw_graph(self, graph):
         graph_group = folium.FeatureGroup(name='Graph Lines', show=True).add_to(self.map)
 
         for node in graph.nodes:
@@ -144,7 +125,7 @@ class FoliumGUI(GUI):
                 ).add_to(graph_group)
 
 
-    def save_map(self, filename: str):
+    def save_map(self, filename):
         folium.LayerControl().add_to(self.map)
 
         print('Saving map to', filename)

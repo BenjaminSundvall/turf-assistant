@@ -4,10 +4,10 @@ import os
 import requests
 
 from util import Coordinate, simple_cost
-from zone import Zone
+from turfclasses import Zone
 from area import Area
 from graph import Graph, build_graph, dijkstra_search
-from zundin_scraper import get_zone_data
+from old_zundin_scraper import get_zone_data
 
 def load_area(ne: Coordinate, sw: Coordinate, round_id: id):
     filename = f'area_data/{round_id}_{ne.lon:.6f}_{ne.lat:.6f}_to_{sw.lon:.6f}_{sw.lat:.6f}.json'
@@ -26,6 +26,7 @@ def load_area(ne: Coordinate, sw: Coordinate, round_id: id):
     response = requests.post(api_url, data).json()
     for zone_json in response:
         zone = Zone.from_json(zone_json)
+
         zone_data = get_zone_data(zone.name, round_id)
         if not zone_data:
             continue
