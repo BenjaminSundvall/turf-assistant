@@ -1,3 +1,4 @@
+from datetime import datetime
 import folium
 import folium.plugins as plugins
 from typing import List
@@ -5,7 +6,7 @@ from typing import List
 from turfclasses import Zone
 from area import Area
 from graph import Graph
-from util import GRAPH_CONNECTEDNESS
+from util import CURRENT_USER
 
 
 class GUI:
@@ -42,25 +43,29 @@ class FoliumGUI(GUI):
         ).add_to(bbox_group)
 
 
-    def draw_zones(self, zones):
+    def draw_zones(self, zones, date=datetime.now()):
         marker_group = folium.FeatureGroup(name='Zone Markers', show=True).add_to(self.map)
         nametag_group = folium.FeatureGroup(name='Zone Names', show=True).add_to(self.map)
 
         for zone in zones:
             zone_icon = str(zone.points_per_hour)
-            zone_color = '#1A9641'
+            if zone.current_owner.name == CURRENT_USER:
+                zone_color = '#1A9641'  # Green
+            else:
+                zone_color = '#D7191C'  # Red
 
             # Draw zone marker
             popup_html = f"""
                 <div style="width: 300px;">
                     <h4>{zone.name}</h4>
                     <p>Points: <b>{zone.takeover_points} / +{zone.points_per_hour}</b></p>
+                    <p>Value: {zone.value(date):.1f}</p>
                     <img style="max-width: 100%; height: auto; padding-top: 10px;"
                         src="https://warded.se/turf/img/zones/{zone.id}UTC.png">
                 </div>
             """
             folium.Marker(
-                location=zone.coordinate.to_list(),
+                location=zone.coordinate.as_list(),
                 icon=plugins.BeautifyIcon(icon=zone_icon,
                                             icon_shape='circle',
                                             border_color=zone_color,
@@ -77,12 +82,12 @@ class FoliumGUI(GUI):
                             border-radius: 5px; padding: 5px;
                             color: white; display: inline-block;">
                     <p>{zone.name}</p>
-                    <p>{zone.takeover_points} / +{zone.points_per_hour}</p>
+                    <p>{zone.takeover_points} / +{zone.points_per_hour} (~{zone.value(date):.1f})</p>
                 </div>
             </div>
             """
             folium.Marker(
-                location=zone.coordinate.to_list(),
+                location=zone.coordinate.as_list(),
                 icon=folium.DivIcon(icon_size=(150, 30),
                                     icon_anchor=(75, -15),
                                     html=nametag_html)
@@ -94,22 +99,12 @@ class FoliumGUI(GUI):
 
         for node in graph.nodes:
             for edge in node.edges:
-                # # folium.PolyLine([edge.start.coords, edge.finish.coords], color='black', weight=2).add_to(graph_group)
-                # halfway_coords = [(edge.start.coords[0] + edge.finish.coords[0]) / 2, (edge.start.coords[1] + edge.finish.coords[1]) / 2]
-                # third_way_coords = [(edge.start.coords[0] + halfway_coords[0]) / 2, (edge.start.coords[1] + halfway_coords[1]) / 2]
-                # folium.PolyLine([edge.start.coords, edge.finish.coords], color='black', weight=2).add_to(graph_group)
+                start_coordinate = edge.start.zone.coordinate
+                finish_coordinate = edge.finish.zone.coordinate
+                halfway_coordinate = start_coordinate + (finish_coordinate - start_coordinate) / 2
+                third_way_coordinate = start_coordinate + (finish_coordinate - start_coordinate) / 3
 
-                start_coords = edge.start.zone.coords
-                finish_coords = edge.finish.zone.coords
-                halfway_coords = start_coords + (finish_coords - start_coords) / 2
-                third_way_coords = start_coords + (finish_coords - start_coords) / 3
-                # third_way_coords = (start_coords + finish_coords) / 2
-
-                a = [start_coords.lat, start_coords.lon]
-                b = [third_way_coords.lat, third_way_coords.lon]
-                c = [halfway_coords.lat, halfway_coords.lon]
-
-                folium.PolyLine([a, c], color='black', weight=2).add_to(graph_group)
+                folium.PolyLine([start_coordinate.as_list(), halfway_coordinate.as_list()], color='black', weight=2).add_to(graph_group)
 
                 nametag_html = f"""
                     <div style="width: 30px; height: 20px; text-align: center;
@@ -118,7 +113,7 @@ class FoliumGUI(GUI):
                     </div>
                 """
                 folium.Marker(
-                    location=b,
+                    location=third_way_coordinate.as_list(),
                     icon=folium.DivIcon(icon_size=(30, 20),
                                         icon_anchor=(15, 10),
                                         html=nametag_html)

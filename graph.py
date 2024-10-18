@@ -1,4 +1,5 @@
-from util import GRAPH_CONNECTEDNESS
+from datetime import datetime
+from typing import List
 from turfclasses import Zone
 
 
@@ -32,7 +33,8 @@ class Node:
 
 
 class Graph:
-    def __init__(self):
+    def __init__(self, graph_connectedness: float=4):
+        self.graph_connectedness = graph_connectedness
         self.nodes = []
 
     def add_node(self, node: Node):
@@ -46,11 +48,10 @@ class Graph:
         return None
 
 
-
-def build_graph(area, cost_fn):
+def build_graph(zones: List[Zone], date: datetime):
     graph = Graph()
 
-    for zone in area.zones:
+    for zone in zones:
         node = Node(zone)
         graph.add_node(node)
 
@@ -60,12 +61,15 @@ def build_graph(area, cost_fn):
             if node is other_node:
                 continue
 
+            edge_cost = node.zone.distance_to(other_node.zone) / other_node.zone.value(date)
+
             # Filter out unreasonable connections to create a sparse graph
-            if node.zone.distance_to(other_node.zone) > node.zone.value * GRAPH_CONNECTEDNESS:
+            # max_dist = 750
+            # if node.zone.distance_to(other_node.zone) > max_dist:
+            if edge_cost > graph.graph_connectedness:
                 continue
 
-            # print('  Adding edge to', other_node.zone.name)
-            edge = Edge(node, other_node, cost_fn(node.zone, other_node.zone))
+            edge = Edge(node, other_node, edge_cost)
             node.add_edge(edge)
 
     return graph
