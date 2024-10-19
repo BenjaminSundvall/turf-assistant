@@ -1,13 +1,17 @@
 from datetime import datetime
 from typing import List
+
+from graphhopperapi import GraphHopperAPI
 from turfclasses import Zone
+from util import sl_distance
 
 
 class Edge:
-    def __init__(self, start, finish, cost: float):
+    def __init__(self, start, finish, cost: float, route=None):
         self.start = start
         self.finish = finish
         self.cost = cost
+        self.route = route
 
 
 class Node:
@@ -50,6 +54,7 @@ class Graph:
 
 def build_graph(zones: List[Zone], date: datetime):
     graph = Graph()
+    gh_api = GraphHopperAPI()
 
     for zone in zones:
         node = Node(zone)
@@ -61,15 +66,14 @@ def build_graph(zones: List[Zone], date: datetime):
             if node is other_node:
                 continue
 
-            edge_cost = node.zone.distance_to(other_node.zone) / other_node.zone.value(date)
-
             # Filter out unreasonable connections to create a sparse graph
-            # max_dist = 750
-            # if node.zone.distance_to(other_node.zone) > max_dist:
-            if edge_cost > graph.graph_connectedness:
+            if sl_distance(node.zone.coordinate, other_node.zone.coordinate) > graph.graph_connectedness * other_node.zone.value(date): # dist / value > graph_connectedness
                 continue
 
-            edge = Edge(node, other_node, edge_cost)
+            bike_route = gh_api.get_bike_route(node.zone.coordinate, other_node.zone.coordinate)
+            edge_cost = bike_route['distance'] / other_node.zone.value(date)
+
+            edge = Edge(node, other_node, edge_cost, bike_route)
             node.add_edge(edge)
 
     return graph

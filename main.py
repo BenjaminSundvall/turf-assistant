@@ -3,12 +3,12 @@ import pandas as pd
 
 
 from graph import build_graph
+from graphhopperapi import GraphHopperAPI
 from gui import FoliumGUI
 from zonestats import ZoneStats
-from turfclasses import Coordinate, User
+from turfclasses import Coordinate, User, Round
 from turfapi import TurfAPI
 from zundin_scraper import ZundinScraper
-from util import get_round_from_date
 
 
 
@@ -19,9 +19,9 @@ if __name__ == "__main__":
     northeast = Coordinate(58.4217, 15.5888)
     southwest = Coordinate(58.4001, 15.5428)
     center = (northeast + southwest) / 2
-    current_round_id = get_round_from_date(datetime.now())
+    current_round_id = Round.get_round_id_from_date(datetime.now())
     last_round_id = current_round_id - 1
-    print(f"Current round ID: {last_round_id}")
+    print(f"Previous round ID: {last_round_id}")
 
     # Fetch zones in the area
     turf_api = TurfAPI()
@@ -34,17 +34,23 @@ if __name__ == "__main__":
         visits_df = scraper.get_visits_data(zone.name, last_round_id)
         stats = ZoneStats(zone.name, visits_df)
         zone.stats = stats
-        if zone.current_owner.name == "l355":
-            print(f"{zone.name} owned by {zone.current_owner}")
 
     # Create graph
     graph = build_graph(zones, datetime.now())
+
+    # GraphHopper Test
+    # gh_api = GraphHopperAPI()
+    # print(f"Routing from {zones[0]} to {zones[1]}")
+    # start = zones[0].coordinate
+    # finish = zones[1].coordinate
+    # path = gh_api.get_bike_route(start, finish)
 
     # Draw map
     gui = FoliumGUI(center)
     gui.draw_bbox(northeast, southwest)
     gui.draw_zones(zones)
     gui.draw_graph(graph)
+    # gui.draw_path(path['points'])
     gui.save_map("map.html")
 
 

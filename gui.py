@@ -6,7 +6,6 @@ from typing import List
 from turfclasses import Zone
 from area import Area
 from graph import Graph
-from util import CURRENT_USER
 
 
 class GUI:
@@ -49,7 +48,7 @@ class FoliumGUI(GUI):
 
         for zone in zones:
             zone_icon = str(zone.points_per_hour)
-            if zone.current_owner.name == CURRENT_USER:
+            if zone.current_owner.name == 'l355':   # TODO: Implement properly!
                 zone_color = '#1A9641'  # Green
             else:
                 zone_color = '#D7191C'  # Red
@@ -118,6 +117,11 @@ class FoliumGUI(GUI):
                                         icon_anchor=(15, 10),
                                         html=nametag_html)
                 ).add_to(graph_group)
+
+
+    def draw_path(self, path_points):
+        path_group = folium.FeatureGroup(name='Bike Path', show=True).add_to(self.map)
+        folium.PolyLine(path_points, color='red', weight=4).add_to(path_group)
 
 
     def save_map(self, filename):

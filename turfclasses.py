@@ -65,7 +65,7 @@ class Round:
         return round_start_date
 
     @staticmethod
-    def get_round_from_date(date: datetime):
+    def get_round_id_from_date(date: datetime):
         """ Calculate the round id of a current date. """
 
         months_since_start = 1 + 12*(date.year - Round.FIRST_ROUND_START.year) + (date.month - Round.FIRST_ROUND_START.month)

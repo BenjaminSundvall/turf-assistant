@@ -1,5 +1,6 @@
 import numpy as np
 from datetime import datetime
+import json
 
 # from turfclasses import User
 
@@ -34,20 +35,17 @@ def get_round_start_from_date(date: datetime):
     return round_start
 
 
-def get_round_from_date(date: datetime):
-    """ Calculate the round id of a current date. """
-
-    start_date = datetime(2010, 7, 10)
-    months_since_start = 1 + (date.year - start_date.year) * 12 + date.month - start_date.month
-
-    # Calculate datetime for round start this month (first sunday of he month at 12 pm)
-    round_start = get_round_start_from_date(date)
-
-    if date < round_start:
-        months_since_start -= 1
-
-    return months_since_start
-
-
 def simple_cost(zone1, zone2):
     return sl_distance(zone1.coords, zone2.coords) / zone2.value
+
+
+def save_to_json(data: dict, filename: str):
+    """Save python dictionary to json file."""
+    with open(filename, 'w') as file:
+        json.dump(data, file)
+    print(f"  {filename} saved successfully.")
+
+def load_from_json(filename: str):
+    """Load python dictionary from json file."""
+    with open(filename, 'r') as file:
+        return json.load(file)
